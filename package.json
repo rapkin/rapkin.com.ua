@@ -5,8 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "cuttlebelle watch --silent",
+    "build:sass": "node-sass --output-style compressed -o assets/css sass/site.scss",
+    "build": "npm run build:sass && cuttlebelle",
     "docs": "cuttlebelle docs"
   },
+  "cuttlebelle": {
+    "site": {
+      "author": "rapkin"
+    }
+  },
   "author": "rapkin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "highlight.js": "^9.15.10",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.12.0"
+  }
 }

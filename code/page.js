@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import hlSyntax from "./utils/syntax-hl";
 
 const googleAnalytics = "UA - 37531241 - 1";
 const yandexVerification = "39324391851d1a5d";
@@ -45,7 +46,7 @@ const Page = ({
           <a href="/">rapkin</a>
         </header>
 
-        <main>{main}</main>
+        <main>{hlSyntax(main)}</main>
       </div>
 
       <footer>rapkin | Software developer</footer>

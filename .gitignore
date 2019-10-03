@@ -3,3 +3,4 @@
 /site/**/*.*
 
 !/site/robots.txt
+assets/css/site.css
