@@ -39,17 +39,37 @@ const Page = ({
           href={_relativeURL(`/assets/css/${stylesheet}.css`, _ID)}
         />
       )}
+      <link
+        href="https://fonts.googleapis.com/css?family=Inconsolata|Literata&display=swap"
+        rel="stylesheet"
+      />
     </head>
     <body>
       <div className="top">
         <header role="banner">
-          <a href="/">rapkin</a>
+          <a className="logo" href="/">
+            @rapkin
+          </a>
+          <span className="logo-details">Software developer</span>
+
+          <div className="menu-wrapper">
+            <li>
+              <a class="menu-item" href="/resume">
+                Resume
+              </a>
+            </li>
+            <li>
+              <a className="menu-item" href="/about">
+                About
+              </a>
+            </li>
+          </div>
         </header>
 
         <main>{hlSyntax(main)}</main>
       </div>
 
-      <footer>rapkin | Software developer</footer>
+      <footer>&copy; Mikola Parfenyuck</footer>
 
       {script && <script src={_relativeURL(`/assets/js/${script}.js`, _ID)} />}
       <script dangerouslySetInnerHTML={{ __html: gaScript }} />
