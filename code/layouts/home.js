@@ -8,7 +8,7 @@ const Home = ({ _pages, _body }) => (
       {Object.values(_pages)
         .filter(item => item.layout === "layouts/post")
         .map(({ title, date, description, _url }) => (
-          <div className="post-item">
+          <div className="post-item" key={_url}>
             <a href={_url} className="post-title">
               {title}
             </a>

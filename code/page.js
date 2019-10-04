@@ -54,7 +54,7 @@ const Page = ({
 
           <div className="menu-wrapper">
             <li>
-              <a class="menu-item" href="/resume">
+              <a className="menu-item" href="/resume">
                 Resume
               </a>
             </li>
