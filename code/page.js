@@ -77,7 +77,7 @@ const Page = ({
       <script
         dangerouslySetInnerHTML={{
           __html:
-            'var lazyLoadInstance = new LazyLoad({ elements_selector: "[data-src]" });'
+            'var lazyLoadInstance = new LazyLoad({ elements_selector: ".lazyload" });'
         }}
       ></script>
     </body>
