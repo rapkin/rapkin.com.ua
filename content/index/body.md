@@ -2,4 +2,4 @@
 layout: layouts/home
 ---
 
-Latest publications
+# Latest publications
