@@ -7,7 +7,22 @@ const sw = new Swup({
   plugins: [new SwupSlideTheme()]
 });
 
+const handleAchor = () => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+};
+
+handleAchor();
+
 sw.on("contentReplaced", () => {
   ll.update();
+  handleAchor();
   ga("send", "pageview");
 });
