@@ -6,7 +6,7 @@ module.exports = exports = function renderer({ Marked, _relativeURL }) {
     const { width, height } = sizeOf(path.join(__dirname, href))
 
     return `<div class="lazyload" style="padding-bottom: ${(height / width) *
-      100}%" data-bg="url(${href})" alt="${text}"><a class="download-link" target="_blank" href="${href}"></a></div>`;
+      100}%" data-bg="url(${href})" title="${text}"><a class="download-link" target="_blank" href="${href}"></a></div>`;
   };
 
   return Marked;

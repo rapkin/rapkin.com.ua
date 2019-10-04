@@ -7,6 +7,7 @@ const Home = ({ _pages, _body }) => (
     <div>
       {Object.values(_pages)
         .filter(item => item.layout === "layouts/post")
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
         .map(({ title, date, description, _url }) => (
           <div className="post-item" key={_url}>
             <a href={_url} className="post-title">
