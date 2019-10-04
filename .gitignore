@@ -3,6 +3,7 @@
 /site/**/*.*
 
 assets/css/site.css
+assets/js/bundle.js
 .Ds_Store
 
 !/site/robots.txt

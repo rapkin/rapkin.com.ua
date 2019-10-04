@@ -66,20 +66,13 @@ const Page = ({
           </div>
         </header>
 
-        <main>{hlSyntax(main)}</main>
+        <main id="swup">{hlSyntax(main)}</main>
       </div>
 
       <footer>&copy; Mikola Parfenyuck</footer>
 
-      {script && <script src={_relativeURL(`/assets/js/${script}.js`, _ID)} />}
+      <script src={_relativeURL("/assets/js/bundle.js", _ID)} />
       <script dangerouslySetInnerHTML={{ __html: gaScript }} />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/12.0.2/lazyload.min.js"></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html:
-            'var lazyLoadInstance = new LazyLoad({ elements_selector: ".lazyload" });'
-        }}
-      ></script>
     </body>
   </html>
 );

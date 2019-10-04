@@ -423,7 +423,7 @@ def make_smooth_zones(city_zones):
 
 Роздивитись можна тут:
 
-<iframe src="https://aspectum.com/app/maps/embed/10da881d-136c-4c53-b83c-b22815a09ba7" width="960" height="600" frameborder="0" style="border: 0"></iframe>
+<iframe class="lazyload" data-src="https://aspectum.com/app/maps/embed/10da881d-136c-4c53-b83c-b22815a09ba7" width="960" height="600" frameborder="0" style="border: 0"></iframe>
 
 ## Оптимізація виконання алгоритму
 
