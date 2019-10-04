@@ -11,13 +11,16 @@
   },
   "cuttlebelle": {
     "site": {
-      "author": "rapkin"
+      "author": "rapkin",
+      "markdownRenderer": "markdown.js"
     }
   },
   "author": "rapkin",
   "license": "ISC",
   "dependencies": {
+    "cuttlebelle": "^1.0.0-alpha.67",
     "highlight.js": "^9.15.10",
+    "image-size": "^0.8.3",
     "lodash": "^4.17.15",
     "node-sass": "^4.12.0"
   }

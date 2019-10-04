@@ -339,7 +339,7 @@ def polygon_fix(polygon):
 
 Роздивитись згенеровану геометрію можна використавши веб-платформу Aspectum:
 
-<iframe src="https://aspectum.com/app/maps/embed/10da881d-136c-4c53-b83c-b22815a09ba7" width="960" height="600" frameborder="0" style="border: 0"></iframe>
+<iframe data-src="https://aspectum.com/app/maps/embed/10da881d-136c-4c53-b83c-b22815a09ba7" width="960" height="600" frameborder="0" style="border: 0"></iframe>
 
 ## Алгоритм з об’єднанням доріг
 
@@ -366,7 +366,7 @@ def merge_roads(polygon):
 
 Переглянути для всіх міст можна тут:
 
-<iframe src="https://aspectum.com/app/maps/embed/10da881d-136c-4c53-b83c-b22815a09ba7" width="960" height="600" frameborder="0" style="border: 0"></iframe>
+<iframe data-src="https://aspectum.com/app/maps/embed/10da881d-136c-4c53-b83c-b22815a09ba7" width="960" height="600" frameborder="0" style="border: 0"></iframe>
 
 ## Алгоритм зі згладжуванням зон
 
