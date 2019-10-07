@@ -367,7 +367,7 @@ def polygon_fix(polygon):
 
 Роздивитись згенеровану геометрію можна використавши веб-платформу Aspectum:
 
-<iframe class="lazyload" data-src="https://aspectum.com/app/maps/embed/dbcc98bb-6bd2-49ee-92d0-26d03297a33b" width="960" height="600" frameborder="0" style="border: 0"></iframe>
+<iframe title="Інтерактивна карта з класифікованими зонами" class="lazyload" data-src="https://aspectum.com/app/maps/embed/dbcc98bb-6bd2-49ee-92d0-26d03297a33b" width="960" height="600" frameborder="0" style="border: 0"></iframe>
 
 ## Алгоритм з об’єднанням доріг
 
@@ -394,7 +394,7 @@ def merge_roads(polygon):
 
 Переглянути для всіх міст можна тут:
 
-<iframe class="lazyload" data-src="https://aspectum.com/app/maps/embed/2351cf7d-e975-4a5d-b10a-b6c2776474da" width="960" height="600" frameborder="0" style="border: 0"></iframe>
+<iframe  title="Інтерактивна карта з класифікованими зонами та об'єднаними дорогами" class="lazyload" data-src="https://aspectum.com/app/maps/embed/2351cf7d-e975-4a5d-b10a-b6c2776474da" width="960" height="600" frameborder="0" style="border: 0"></iframe>
 
 ## Алгоритм зі згладжуванням зон
 
@@ -453,7 +453,7 @@ def make_smooth_zones(city_zones):
 
 Роздивитись можна тут:
 
-<iframe class="lazyload" data-src="https://aspectum.com/app/maps/embed/10da881d-136c-4c53-b83c-b22815a09ba7" width="960" height="600" frameborder="0" style="border: 0"></iframe>
+<iframe title="Інтерактивна карта зі згладженими класифікованими зонами" class="lazyload" data-src="https://aspectum.com/app/maps/embed/10da881d-136c-4c53-b83c-b22815a09ba7" width="960" height="600" frameborder="0" style="border: 0"></iframe>
 
 ## Оптимізація виконання алгоритму
 
