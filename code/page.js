@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import hlSyntax from "./utils/syntax-hl";
+import Icon from "./utils/icon";
 
 const yandexVerification = "39324391851d1a5d";
 
@@ -78,7 +79,13 @@ const Page = ({
         <main id="swup">{hlSyntax(main)}</main>
       </div>
 
-      <footer>&copy; Mikola Parfenyuck</footer>
+      <footer>
+        &copy; Mikola Parfenyuck
+        <div className="social-links">
+          <Icon name="twitter" link="https://twitter.com/i_rapkin" />
+          <Icon name="github" link="https://github.com/rapkin" />
+        </div>
+      </footer>
 
       <script src="/assets/js/bundle.js" />
     </body>

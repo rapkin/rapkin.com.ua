@@ -123,6 +123,12 @@ main {
 footer {
   margin-top: auto;
   padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.social-links {
+  margin-left: auto;
 }
 
 @media screen and (max-width: 800px) {
