@@ -42,7 +42,7 @@ const Page = ({
           </a>
           <span className="logo-details">Software developer</span>
 
-          <div className="menu-wrapper">
+          <ul className="menu-wrapper">
             <li>
               <a className="menu-item" href="/resume">
                 Resume
@@ -53,7 +53,7 @@ const Page = ({
                 About
               </a>
             </li>
-          </div>
+          </ul>
         </header>
 
         <main id="swup">{hlSyntax(main)}</main>
