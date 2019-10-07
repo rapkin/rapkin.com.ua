@@ -1,7 +1,7 @@
 /docs
 /node_modules
 /assets/optimized-img
-/site/**/*.*
+/site/
 
 assets/css/site.css
 assets/js/bundle.js
