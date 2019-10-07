@@ -2,39 +2,51 @@ const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
 const glob = require("glob");
+const imagemin = require("imagemin");
+const imageminJpegtran = require("imagemin-jpegtran");
+const imageminPngquant = require("imagemin-pngquant");
 
+const images = path.join(__dirname, "assets/img/*.{jpg,jpeg,png}");
 let outputDir = path.join(__dirname, "assets/optimized-img/");
-
-const toSize = b => {
-  const kb = Math.round(b / 1024);
-  if (kb < 1024) return kb + "Kb";
-  return Math.round(kb / 1024) + "Mb";
-};
-
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
 
-glob(path.join(__dirname, "assets/img/*.{jpg,jpeg,png}"), (err, files) =>
-  files.forEach(inputFile => {
-    const optimizedFile = path.join(outputDir, path.basename(inputFile));
-    if (fs.existsSync(optimizedFile))
-      return console.log("Skip optimized", inputFile);
-    sharp(inputFile)
-      .resize({ width: 960, withoutEnlargement: true })
-      .jpeg({ progressive: true, quality: 50, force: false })
-      .png({
-        progressive: true,
-        quality: 50,
-        adaptiveFiltering: true,
-        palette: true,
-        colors: 64,
-        force: false
+const toSize = b => {
+  const kb = b / 1024;
+  if (kb < 1024) return kb.toFixed(1) + "Kb";
+  return (kb / 1024).toFixed(1) + "Mb";
+};
+
+const resizeImages = () =>
+  new Promise((resolve, reject) => {
+    glob(images, async (err, files) => {
+      const resized = await Promise.all(
+        files.map(async inputFile => {
+          const optimizedFile = path.join(outputDir, path.basename(inputFile));
+
+          await sharp(inputFile)
+            .resize({ width: 960, withoutEnlargement: true })
+            .toFile(optimizedFile);
+          return optimizedFile;
+        })
+      );
+      resolve(resized.filter(f => f));
+    });
+  });
+
+const optimize = async () => {
+  const toOptimize = await resizeImages();
+  const files = await imagemin(toOptimize, {
+    destination: outputDir,
+    plugins: [
+      imageminJpegtran(),
+      imageminPngquant({
+        quality: [0.6, 0.8]
       })
-      .toFile(optimizedFile)
-      .then(function(newFileInfo) {
-        console.log("Success", inputFile, toSize(newFileInfo.size));
-      })
-      .catch(function(err) {
-        console.error(err);
-      });
-  })
-);
+    ]
+  });
+  console.table(
+    files.map(f => ({ file: f.destinationPath, size: toSize(f.data.length) }))
+  );
+};
+
+optimize();
