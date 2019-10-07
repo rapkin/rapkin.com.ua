@@ -115,7 +115,7 @@ main {
     transition: opacity 0.2s ease-out;
   }
 
-  .download-link {
+  .download-link:hover {
     opacity: 1;
   }
 }
