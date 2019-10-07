@@ -15,6 +15,8 @@ export default ({ name, link }) => {
   return (
     <a
       className={`icon icon-${name}`}
+      rel="noopener"
+      target="_blank"
       href={link}
       dangerouslySetInnerHTML={{ __html: text }}
     />
