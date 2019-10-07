@@ -10,6 +10,7 @@
     "build:sass": "node-sass --output-style compressed -o assets/css sass/site.scss",
     "build:js": "rollup --config",
     "build": "npm run build:sass && npm run build:js && build:images && cuttlebelle",
+    "deploy": "npm run build && node deploy.js",
     "docs": "cuttlebelle docs"
   },
   "watch": {
