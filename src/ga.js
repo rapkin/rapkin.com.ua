@@ -15,4 +15,4 @@ const id = "UA-37531241-1";
 })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
 
 ga("create", id, "auto");
-ga("send", "pageview");
+ga("send", "pageview", location.pathname);

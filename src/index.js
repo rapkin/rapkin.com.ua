@@ -2,7 +2,7 @@ import Swup from "swup";
 import LazyLoad from "vanilla-lazyload";
 import SwupSlideTheme from "@swup/slide-theme";
 import "./load-font";
-import './ga';
+import "./ga";
 
 const ll = new LazyLoad({ elements_selector: ".lazyload" });
 const sw = new Swup({
@@ -26,5 +26,5 @@ handleAchor();
 sw.on("contentReplaced", () => {
   ll.update();
   handleAchor();
-  ga("send", "pageview");
+  ga("send", "pageview", location.pathname);
 });
