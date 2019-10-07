@@ -33,7 +33,7 @@ const Page = ({ title, description, stylesheet, main, _relativeURL, _ID }) => (
       <meta property="article:author" content={author} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content={"@" + twitterUser} />
-      <meta name="description" itemprop="description" content={description} />
+      <meta name="description" content={description} />
       <meta property="og:description" content={description} />
       <meta name="twitter:description" content={description} />
 
