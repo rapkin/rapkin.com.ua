@@ -5,7 +5,4 @@
 
 assets/css/site.css
 assets/js/bundle.js
-.Ds_Store
-
-!/site/CNAME
-!/site/robots.txt
+.DS_Store

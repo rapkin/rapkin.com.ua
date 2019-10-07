@@ -9,7 +9,8 @@
     "build:images": "node optimize-images.js",
     "build:sass": "node-sass --output-style compressed -o assets/css sass/site.scss",
     "build:js": "rollup --config",
-    "build": "npm run build:sass && npm run build:js && build:images && cuttlebelle",
+    "build:static": "cp -r root site",
+    "build": "npm run build:sass && npm run build:js && npm run build:images && npm run build:static && cuttlebelle",
     "deploy": "npm run build && node deploy.js",
     "docs": "cuttlebelle docs"
   },
@@ -17,6 +18,7 @@
     "build:images": "assets/img/*.*",
     "build:sass": "sass/*.*",
     "build:js": "src/*.*",
+    "build:static": "root/*.*",
     "build:site": "markdown.js"
   },
   "cuttlebelle": {
