@@ -4,16 +4,13 @@ import hlSyntax from "./utils/syntax-hl";
 import Icon from "./utils/icon";
 
 const yandexVerification = "39324391851d1a5d";
+const author = "Mikola Parfenyuck";
+const email = "mikola.parfenyuck@gmail.com";
+const twitterUser = "i_rapkin";
+const githubUser = "rapkin";
+const siteName = "@rapkin | Software developer";
 
-const Page = ({
-  title,
-  description,
-  stylesheet,
-  main,
-  script,
-  _relativeURL,
-  _ID
-}) => (
+const Page = ({ title, description, stylesheet, main, _relativeURL, _ID }) => (
   <html lang="en">
     <head>
       <title>{title} - @rapkin</title>
@@ -22,8 +19,6 @@ const Page = ({
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="yandex-verification" content={yandexVerification} />
 
-      <meta name="description" content={description} />
-
       <link rel="stylesheet" href="/assets/css/site.css" />
       {stylesheet && (
         <link
@@ -31,6 +26,16 @@ const Page = ({
           href={_relativeURL(`/assets/css/${stylesheet}.css`, _ID)}
         />
       )}
+
+      <meta property="og:type" content="article" />
+      <meta property="og:site_name" content={siteName} />
+      <meta name="author" content={author} />
+      <meta property="article:author" content={author} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content={"@" + twitterUser} />
+      <meta name="description" itemprop="description" content={description} />
+      <meta property="og:description" content={description} />
+      <meta name="twitter:description" content={description} />
 
       <link
         rel="apple-touch-icon"
@@ -80,10 +85,18 @@ const Page = ({
       </div>
 
       <footer>
-        &copy; Mikola Parfenyuck
+        &copy; {author}
         <div className="social-links">
-          <Icon name="twitter" link="https://twitter.com/i_rapkin" />
-          <Icon name="github" link="https://github.com/rapkin" />
+          <Icon
+            name="twitter"
+            title="My twitter"
+            link={`https://twitter.com/${twitterUser}`}
+          />
+          <Icon
+            name="github"
+            title="My github"
+            link={`https://github.com/${githubUser}`}
+          />
         </div>
       </footer>
 

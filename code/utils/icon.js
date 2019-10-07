@@ -10,13 +10,14 @@ const getText = name => {
   return fs.readFileSync(path.join(__dirname, `../icons/${name}.svg`), "utf-8");
 };
 
-export default ({ name, link }) => {
+export default ({ name, link, title }) => {
   const text = getText(name);
   return (
     <a
       className={`icon icon-${name}`}
       rel="noopener"
       target="_blank"
+      title={title}
       href={link}
       dangerouslySetInnerHTML={{ __html: text }}
     />

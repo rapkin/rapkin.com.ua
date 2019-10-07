@@ -23,7 +23,6 @@
   },
   "cuttlebelle": {
     "site": {
-      "author": "rapkin",
       "markdownRenderer": "markdown.js"
     }
   },
