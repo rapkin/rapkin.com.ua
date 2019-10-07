@@ -3,6 +3,7 @@ WORKDIR /app
 COPY package* /app/
 RUN npm install
 COPY . .
+RUN mkdir site
 RUN npm run build
 
 FROM nginx:alpine
