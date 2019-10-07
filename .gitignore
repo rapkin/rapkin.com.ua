@@ -1,5 +1,6 @@
 /docs
 /node_modules
+/assets/optimized-img
 /site/**/*.*
 
 assets/css/site.css

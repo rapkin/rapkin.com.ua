@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cuttlebelle watch --silent",
-    "watch": "npm-watch",
+    "start": "npm-watch",
+    "build:site": "cuttlebelle watch --silent",
+    "build:images": "node optimize-images.js",
     "build:sass": "node-sass --output-style compressed -o assets/css sass/site.scss",
     "build:js": "rollup --config",
-    "build": "npm run build:sass && npm run build:js && cuttlebelle",
+    "build": "npm run build:sass && npm run build:js && build:images && cuttlebelle",
     "docs": "cuttlebelle docs"
   },
   "watch": {
-    "build:sass": "sass/*.scss",
-    "build:js": "src/*.js"
+    "build:images": "assets/img/*.*",
+    "build:sass": "sass/*.*",
+    "build:js": "src/*.*",
+    "build:site": "markdown.js"
   },
   "cuttlebelle": {
     "site": {
@@ -26,6 +29,7 @@
   "dependencies": {
     "@swup/slide-theme": "^1.0.5",
     "cuttlebelle": "^1.0.0-alpha.67",
+    "glob": "^7.1.4",
     "highlight.js": "^9.15.10",
     "image-size": "^0.8.3",
     "lodash": "^4.17.15",
@@ -34,7 +38,13 @@
     "rollup": "^1.23.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "sharp": "^0.23.1",
     "swup": "^2.0.7",
-    "vanilla-lazyload": "^12.0.2"
+    "universal-analytics": "^0.4.20",
+    "vanilla-lazyload": "^12.0.2",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "rollup-plugin-json": "^4.0.0"
   }
 }

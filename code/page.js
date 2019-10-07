@@ -2,16 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import hlSyntax from "./utils/syntax-hl";
 
-const googleAnalytics = "UA - 37531241 - 1";
 const yandexVerification = "39324391851d1a5d";
-const gaScript = `
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', '${googleAnalytics}', 'auto');
-ga('send', 'pageview');
-`;
 
 const Page = ({
   title,
@@ -22,7 +13,7 @@ const Page = ({
   _relativeURL,
   _ID
 }) => (
-  <html>
+  <html lang="en">
     <head>
       <title>{title} - @rapkin</title>
       <meta charSet="utf-8" />
@@ -32,17 +23,16 @@ const Page = ({
 
       <meta name="description" content={description} />
 
-      <link rel="stylesheet" href={_relativeURL(`/assets/css/site.css`, _ID)} />
+      <link rel="stylesheet" href="/assets/css/site.css" />
       {stylesheet && (
         <link
           rel="stylesheet"
           href={_relativeURL(`/assets/css/${stylesheet}.css`, _ID)}
         />
       )}
-      <link
-        href="https://fonts.googleapis.com/css?family=Inconsolata|Literata&display=swap"
-        rel="stylesheet"
-      />
+
+      <link rel="preconnect" href="https://www.google-analytics.com"></link>
+      <link rel="preconnect" href="http://fonts.googleapis.com"></link>
     </head>
     <body>
       <div className="top">
@@ -71,8 +61,7 @@ const Page = ({
 
       <footer>&copy; Mikola Parfenyuck</footer>
 
-      <script src={_relativeURL("/assets/js/bundle.js", _ID)} />
-      <script dangerouslySetInnerHTML={{ __html: gaScript }} />
+      <script src="/assets/js/bundle.js" />
     </body>
   </html>
 );
