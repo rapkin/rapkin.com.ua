@@ -21,7 +21,7 @@ class Home extends Component {
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .map(({ title, date, description, _url }) => (
               <div className="post-item" key={_url}>
-                <a href={_url} className="post-title">
+                <a href={_url + '/'} className="post-title">
                   {title}
                 </a>
                 <span className="post-date">

@@ -33,7 +33,7 @@ const Page = ({ title, description, stylesheet, image, main, _relativeURL, _ID }
 
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content={siteName} />
-        <meta itemprop="name" content={title} />
+        <meta itemProp="name" content={title} />
 
         <meta name="author" content={author} />
         <meta property="article:author" content={author} />
@@ -84,12 +84,12 @@ const Page = ({ title, description, stylesheet, image, main, _relativeURL, _ID }
 
             <ul className="menu-wrapper">
               <li>
-                <a className="menu-item" href="/resume">
+                <a className="menu-item" href="/resume/">
                   Resume
                 </a>
               </li>
               <li>
-                <a className="menu-item" href="/about">
+                <a className="menu-item" href="/about/">
                   About
                 </a>
               </li>
