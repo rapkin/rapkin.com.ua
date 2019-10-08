@@ -5,6 +5,7 @@ import Icon from "./utils/icon";
 import getImagePath from "./utils/get-image-path";
 
 const yandexVerification = "39324391851d1a5d";
+const googleVerification = "pnATuZP_aTcMjckmXnh2j6oO8Mk9YXUA7GfE7UO4QXk";
 const author = "Mikola Parfenyuck";
 const email = "mikola.parfenyuck@gmail.com";
 const twitterUser = "i_rapkin";
@@ -53,6 +54,7 @@ const Page = ({
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="yandex-verification" content={yandexVerification} />
+        <meta name="google-site-verification" content={googleVerification} />
 
         <link rel="stylesheet" href="/assets/css/site.css" />
         {stylesheet && (
