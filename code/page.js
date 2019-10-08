@@ -10,7 +10,7 @@ const twitterUser = "i_rapkin";
 const githubUser = "rapkin";
 const siteName = "@rapkin | Software developer";
 
-const Page = ({ title, description, stylesheet, main, _relativeURL, _ID }) => (
+const Page = ({ title, description, stylesheet, image, main, _relativeURL, _ID }) => (
   <html lang="en">
     <head>
       <title>{title} - @rapkin</title>
@@ -29,13 +29,24 @@ const Page = ({ title, description, stylesheet, main, _relativeURL, _ID }) => (
 
       <meta property="og:type" content="article" />
       <meta property="og:site_name" content={siteName} />
+      <meta itemprop="name" content={title} />
+
       <meta name="author" content={author} />
       <meta property="article:author" content={author} />
+
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content={"@" + twitterUser} />
+
       <meta name="description" content={description} />
+      <meta itemProp="description" content={description} />
       <meta property="og:description" content={description} />
       <meta name="twitter:description" content={description} />
+
+      {image && (<>
+        <meta itemProp="image" content={image} />
+        <meta property="og:image" content={image} />
+        <meta name="twitter:image" content={image} />
+      </>)}
 
       <link
         rel="apple-touch-icon"
