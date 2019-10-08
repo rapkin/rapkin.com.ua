@@ -7,3 +7,20 @@
   border: 1px solid #222;
   font-family: "Inconsolata", monospace;
 }
+
+.hljs::-webkit-scrollbar {
+  height: 10px;
+}
+
+.hljs::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.hljs::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.hljs::-webkit-scrollbar-thumb:window-inactive {
+  background: #999;
+}

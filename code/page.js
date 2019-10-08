@@ -115,7 +115,22 @@ const Page = ({
         <link rel="manifest" href="/site.webmanifest" />
 
         <link rel="preconnect" href="https://www.google-analytics.com"></link>
-        <link rel="preconnect" href="http://fonts.googleapis.com"></link>
+        {[
+          "inconsolata-v18-latin-regular.woff2",
+          "literata-v13-cyrillic_latin-italic.woff2",
+          "literata-v13-cyrillic_latin-700.woff2",
+          "literata-v13-cyrillic_latin-700italic.woff2",
+          "literata-v13-cyrillic_latin-regular.woff2"
+        ].map(name => (
+          <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            key={name}
+            href={"/assets/fonts/" + name}
+            crossOrigin="true"
+          ></link>
+        ))}
       </head>
       <body>
         <div className="top">
