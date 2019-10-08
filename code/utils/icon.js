@@ -17,6 +17,7 @@ export default ({ name, link, title }) => {
       className={`icon icon-${name}`}
       rel="noopener"
       target="_blank"
+      aria-label={title}
       title={title}
       href={link}
       dangerouslySetInnerHTML={{ __html: text }}
