@@ -26,6 +26,7 @@ date: 2019-10-03 21:42:13
 - **Overpass** — API щоб завантажувати, фільтрувати чи трансформувати дані з OSM.
 
 - **Osm2geojson** — бібліотека для конвертації даних OSM (та Overpass) в геометрію. Більше деталей в репозиторії [aspectumapp/osm2geojson](https://github.com/aspectumapp/osm2geojson)
+
 - **Land polygons** — датасет берегової лінії [osmdata/land-polygons](https://osmdata.openstreetmap.de/data/land-polygons.html)
 
 - **Aspectum** — сервіс для візуалізації та аналізу картографічної інформації. Можна скористатись і geojson.io, але при великій кількості геометрію можуть виникати проблеми з продуктивністю. Часто можна замінити інтерфейсом QGIS. Сторінка сервісу [aspectum.com](https://aspectum.com)
@@ -78,8 +79,8 @@ GeoJson файл, в якому містяться набір полігонів
 
 ## Завантаження даних з OSM
 
-Не зміг знайти хорошої бібліотеки аби відпарсити дані OSM (якщо я погано шукав, то поділіться такою бібліотекою в коментарях), тому щоб сформувати з набору XML даних якусь геометрію я написав бібліотеку [osm2geojson](https://github.com/aspectumapp/osm2geojson), яка б перетворила OSM/Overpass XML в геометрію.
-До речі, для роботи з Overpass JSON там теж є функції.
+Не зміг знайти хорошої бібліотеки аби відпарсити дані OSM (якщо я погано шукав, то поділіться такою бібліотекою в коментарях), тому щоб сформувати необхідну геометрію я написав бібліотеку [osm2geojson](https://github.com/aspectumapp/osm2geojson), яка перетворює OSM/Overpass XML в геометрію Shapely або GeoJSON.
+Звичайно, можна скористатись бібліотекою GDAL, але процес встановлення занадто складний. 
 
 Отож отримати межу міста можна простим запитом до API Overpass:
 
@@ -446,6 +447,16 @@ def make_smooth_zones(city_zones):
         .buffer(merge_buffer_size, cap_style=3, join_style=2, mitre_limit=1)
         .buffer(-merge_buffer_size, cap_style=2, join_style=2, mitre_limit=1)
       )
+
+  zonesTree = STRtree(zones_polygons)
+  for idx, zone in enumerate(zones_polygons):
+    found = zonesTree.query(zone)
+    for z in found:
+      if zone.intersects(z):
+        if not z is zone and zone.intersection(z).area > 0:
+          zones_polygons[idx] = zone.difference(z.buffer(0.000001, cap_style=2, join_style=2, mitre_limit=1))
+
+  return geometry.MultiPolygon(zones_polygons)
 ```
 
 Результат згладжування
