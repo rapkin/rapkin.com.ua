@@ -1,6 +1,5 @@
 ---
 layout: layouts/post
-date: 2015-05-10 14:34:08
 ---
 
 <a id="zmist"></a>

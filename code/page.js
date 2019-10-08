@@ -11,8 +11,39 @@ const twitterUser = "i_rapkin";
 const githubUser = "rapkin";
 const siteName = "@rapkin | Software developer";
 
-const Page = ({ title, description, stylesheet, image, main, _relativeURL, _ID }) => {
-  image = getImagePath(image, true)
+const articleMeta = ({ image, title, date }) => {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    author: author,
+    headline: title,
+    datePublished: date,
+    publisher: {
+      "@type": "Organization",
+      name: "rapkin",
+      url: "https://rapkin.com.ua",
+      logo: {
+        "@type": "ImageObject",
+        url: getImagePath("/assets/img/bunny.png", true)
+      }
+    },
+    name: title
+  };
+  if (image) data.image = image;
+  return JSON.stringify(data);
+};
+
+const Page = ({
+  title,
+  description,
+  stylesheet,
+  image,
+  date,
+  main,
+  _relativeURL,
+  _ID
+}) => {
+  image = getImagePath(image, true);
 
   return (
     <html lang="en">
@@ -46,11 +77,23 @@ const Page = ({ title, description, stylesheet, image, main, _relativeURL, _ID }
         <meta property="og:description" content={description} />
         <meta name="twitter:description" content={description} />
 
-        {image && (<>
-          <meta itemProp="image" content={image} />
-          <meta property="og:image" content={image} />
-          <meta name="twitter:image" content={image} />
-        </>)}
+        {image && (
+          <>
+            <meta itemProp="image" content={image} />
+            <meta property="og:image" content={image} />
+            <meta name="twitter:image" content={image} />
+          </>
+        )}
+
+        <meta name="google" content="nositelinkssearchbox" />
+        {date && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: articleMeta({ title, image, date })
+            }}
+          ></script>
+        )}
 
         <link
           rel="apple-touch-icon"
@@ -119,7 +162,7 @@ const Page = ({ title, description, stylesheet, image, main, _relativeURL, _ID }
       </body>
     </html>
   );
-}
+};
 
 Page.propTypes = {
   title: PropTypes.string.isRequired,

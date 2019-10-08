@@ -1,4 +1,5 @@
 title: Сегментуємо міста на зони використовуючи сітку доріг
 image: /assets/img/segmentation-title.png
+date: 2019-10-03 21:42:13
 description: Розробка алгоритму для автоматичної розмітки міст з використанням Python, Shapely та OpenStreetMap
 main: body.md

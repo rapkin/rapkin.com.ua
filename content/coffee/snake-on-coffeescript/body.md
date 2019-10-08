@@ -1,6 +1,5 @@
 ---
 layout: layouts/post
-date: 2015-05-13 13:17:42
 ---
 
 ![Snake on coffeescript](/assets/img/game_page.png)
