@@ -1,4 +1,5 @@
 title: Snake on CoffeeScript
+image: /assets/img/game_page.png
 date: 2015-05-13 13:17:42
 description: HTML5/JavaScript game written on CoffeeScript.
 main: body.md
