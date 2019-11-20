@@ -1,7 +1,3 @@
----
-layout: layouts/post
----
-
 ## Реферат
 
 
