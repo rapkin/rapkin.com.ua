@@ -142,7 +142,7 @@ def get_city_border(city_id):
 ```python
 def get_roads(minlat, minlon, maxlat, maxlon):
   bb = f"({minlat}, {minlon}, {maxlat}, {maxlon})"
-  data = cached_overpass_call(f"""
+  data = overpass_call(f"""
     way[highway~"^motorway$|^trunk$|^primary$|^secondary$|^tertiary$|^residential$"]{bb};
     out geom;
   """)
@@ -154,7 +154,7 @@ def get_roads(minlat, minlon, maxlat, maxlon):
 ```python
 def get_water_zones(minlat, minlon, maxlat, maxlon):
   bb = f"({minlat}, {minlon}, {maxlat}, {maxlon})"
-  data = cached_overpass_call(f"""
+  data = overpass_call(f"""
     (
       way[waterway~"^river$|^stream$|^riverbank$"]{bb};
       way[landuse=basin]{bb};
@@ -230,13 +230,12 @@ def convert_water_features_to_zones(geoms):
   return ops.cascaded_union(water_zones)
 ```
 
-__(Тут вже можна розписати)__
-На жаль, процес класифікації геометрії OSM не вдасться повністю помістити в цю статтю (насправді це можна виділити в окрему величезну статтю), але в кількох словах завантаження всієї геометрії з OSM та розбиття за певними правилами на цільовий набір класів.
+Геометрію по якій буде проводитись класифікації зон міста можна завантажити зробивши схожий запит, але уже без фільтрації за властивостями об'єктів.
 
 ```python
 def get_all_geometry(minlat, minlon, maxlat, maxlon):
   query = f"(node({minlat}, {minlon}, {maxlat}, {maxlon});<;); out geom;"""
-  data = cached_overpass_call(query)
+  data = overpass_call(query)
 
   features = []
   for item in xml2geojson(data)['features']:
@@ -248,6 +247,8 @@ def get_all_geometry(minlat, minlon, maxlat, maxlon):
     features.append(item)
   return features
 ```
+
+В цьому коді було використано метод `detect_class`, деталі реалізації якого буде описано в наступному пункті.
 
 В результаті цих операцій ми отримуємо початкові набори геометрії (на прикладі міста Київ):
 
@@ -351,7 +352,7 @@ def compute_simple_zones(border, roads, railways, water_zones):
 В результаті ми отримали набір полігонів (в GeoJSON).
 Але кінцева ціль — отримати класифіковані зони міста, тому полігони які ще не мають класу потрібно якось класифікувати (зони доріг, залізниці та водних об’єктів ми вже отримали на попередніх етапах).
 
-Для прикладу можна прокласифікувати ці зони порахувавши площу пересічення з іншими полігонами OSM (які до цього були автоматично розмічені за цільовим набором класів).
+Маючи набір некласифікованих зон можна провести їхню класифікацію вирахувавши площу пересічення з іншими полігонами OSM (які до цього було завантажено та прокласифіковано).
 
 ```python
 def classify_features(features, all_geometry_by_class):
@@ -412,11 +413,7 @@ def polygon_fix(polygon):
 ### Алгоритм з об’єднанням доріг
 
 Цей алгоритм майже не відрізняється від попереднього, відмінний лише етап утворення мультиполігонів доріг (звичайних та залізничних).
-Аби цього досягнути потрібно замість звичайної побудови буферів робити буфер більшого розміру, а потім операцією віднімання буферу отримувати полігони потрібного розміру, при цьому дороги які були поряд стануть об’єднаними.
-
-![Візуалізація алгоритму об'єднання доріг](/assets/img/merge-vis.gif)
-
-Код який це робить
+Аби цього досягнути потрібно замість звичайної побудови буферів робити буфер більшого розміру, а потім операцією віднімання буферу отримувати полігони потрібного розміру, при цьому дороги які були поряд стануть об’єднаними. Код який це робить:
 
 ```python
 def merge_roads(polygon):
@@ -498,12 +495,169 @@ def make_smooth_zones(city_zones):
 
 ![Згладжені зони міста Київ](/assets/img/kiev.png)
 
-### Оптимізація виконання алгоритму
+### Класифікація завантаженої геометрії з OSM
 
-Оскільки цей алгоритм виконує розмітку для міста, то логічно буде спробувати запустити його на декількох містах.
+Вище було вже згадано, що завантажену геометрію з OSM потрібно класифікувати, аби потім була можливість вираховувати площі пересічень з утвореними некласифікованими зонами міст.
+
+Для розуміння повної структури стандарту OSM краще скористатись документацією стандарту (в нашому випадку потрібно також ознайомитись і з особливостями формату даних Overpass), але основні пункти буде описано тут.
+
+Кожен геометричний об'єкт OSM поряд з просторовою інформацією несе також мета-дані, а саме набір властивостей ключ:значення, які покликані відобразити господарське призначення тих чи інших об'єктів, їхні властивості та інше. Перерахувати всі ці властивості буде складно, але для прикладу вище в коді запиту на завантаження геометрії яка описує водні об'єкти можна було помітити набір фільтрів, де і були записані такі пари ключ:значення які присвоюють саме для водних об'єктів: landuse=basin, landuse=water і тд.
+
+Основні види геометрії формату OSM це: точки, лінії та полігони. Але у випадку задачі класифікації зон доцільно використовувати саме полігональну геометрію. Для ліній та точок теж можна надати розмір (утворивши буфер), але для кожного виду таких об'єктів потрібно було б визначати цей розмір, що зайняло б дуже багато часу та зусиль, а вплив на якість результату був би мінімальним.
+
+Аби провести класифікацію всього різноманіття завантаженої геометрії було сформовано файл конфігурації, який зберігає значення пар ключ:значення, які відповідають вже цільвому набору класів. Приклад частини цього файлу:
+
+```json
+{
+  "Artificial Surfaces": [
+    {
+      "key": "amenity",
+      "values": [
+        "animal_shelter",
+        "arts_centre",
+        "bank",
+        "bar",
+        "cafe",
+        ...
+      ]
+    },
+    {
+      "key": "building",
+      "values": [...]
+    },
+    ...
+  ],
+  "Forests": [...],
+  ...
+}
+```
+
+Маючи цю конфігурацію, доволі просто знайти до якого класу відноситься об'єкт зіставивши значення властивостей об'єкту зі значеннями описаними в конфігурації.
+
+Використання такої конфігурації дозволяє гнучко змінувати цільовий набір класів та властивості які характеризують кожен клас.
+
+Далі приведено код для завантаження конфігурації в пам'ять та класифікації об'єкту OSM відповідно.
+
+```python
+def load_osm_classes():
+    osm_classes = {}
+    with open(os.path.join(config.DIR, 'osm-classes.json'), encoding='utf-8') as data:
+        data = json.load(data)
+        for label, items in data.items():
+            if not label in osm_classes:
+                osm_classes[label] = {}
+
+            for item in items:
+                if not item['key'] in osm_classes[label]:
+                    osm_classes[label][item['key']] = item['values']
+                else:
+                    for v in item['values']:
+                        osm_classes[label][item['key']].append(v)
+    return osm_classes
+
+osm_classes = load_osm_classes()
+
+def detect_class(f):
+    if 'tags' not in f['properties']:
+        return None
+
+    for key, value in f['properties']['tags'].items():
+        for label, by_key in osm_classes.items():
+            if key in by_key and value in by_key[key]:
+                return label
+    return None
+```
+
+### Оптимізація та виконання алгоритму
+
+Оскільки цей алгоритм виконує розмітку для міста, то логічно буде спробувати запустити його для декількох міст.
 А в тому щоб робити це синхронно нема ніякої необхідності — найпростіше буде просто запустити виконання для кожного міста в окремому потоці.
 
+Приклад коду який запускає обрахунки для кількох міст паралельно:
+
+```python
+city_ids = [
+    395856,
+    421866,
+    439840,
+    ...
+]
+t_limit = Semaphore(multiprocessing.cpu_count())
+pool = []
+lock = Lock()
+
+for id in city_ids:
+    t = Thread(target=split_city, args=(id, lock, t_limit), name=f"city-{id}")
+    pool.append(t)
+    t.start()
+
+for t in pool:
+    t.join()
+```
+
+Тіло методу `split_city`, який і виконує всі три модифікацї алгоритму:
+
+```python
+def split_city(id, lock, t_limit):
+    lock.acquire()
+    try:
+        border, roads, railways, water_zones = load_projected_data(id)
+    except Exception as e:
+        print('Data for city not loaded', id, e)
+        traceback.print_exc()
+        return False
+    finally:
+        lock.release()
+    t_limit.acquire()
+
+    zones_simple = compute_simple_zones(border, roads, railways, water_zones)
+    zones_simple = project_features_to_polar(zones_simple)
+    classify_and_save_items(zones_simple, id, f"data/city-{id}-simple.geojson")
+
+    merged_roads_multipolygon = merge_roads(roads)
+    merged_railways_multipolygon = merge_roads(railways)
+
+    zones_merged = compute_merged_zones(border, merged_roads_multipolygon, merged_railways_multipolygon, water_zones)
+    zones_merged = project_features_to_polar(zones_merged)
+    classify_and_save_items(zones_merged, id, f"data/city-{id}-merged.geojson")
+
+    zones_smoothed = compute_smoothed_zones(border, merged_roads_multipolygon, merged_railways_multipolygon, water_zones)
+    zones_smoothed = project_features_to_polar(zones_smoothed)
+    classify_and_save_items(zones_smoothed, id, f"data/city-{id}-smoothed.geojson")
+
+    t_limit.release()
+    return True
+```
+
+В результаті виконання цього коду буде утворено GeoJSON файли з класифікованими зонами для вказаних міст. Ці файли можна використовувати як датасет або візуалізувати (наприклад програмою QGIS).
+
 Також велику частину обрахованої геометрії можна кешувати та зберігати на жорсткий диск, але потрібно враховувати те, що OSM постійно змінюється і про інвалідацію цього кешу забувати не треба.
+
+Добре ілюструє підхід до кешування етап завантаження даних з OSM/Overpass. Вище в коді часто зустрічався метод `overpass_call`, який завантажує необхідну інформацію (згідно запиту) з Overpass:
+
+```python
+def overpass_call(query):
+    encoded = urllib.parse.quote(query.encode("utf-8"), safe='~()*!.\'')
+    r = requests.post(config.OVERPASS,
+                      data=f"data={encoded}",
+                      headers={"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"})
+    if not r.status_code is 200:
+        raise requests.exceptions.HTTPError('Overpass server respond with status '+str(r.status_code))
+    return r.text
+```
+
+В коді доволі просто замінити виклик цього методу на версію з вбудованим механізмом кешування:
+
+```python
+def cached_overpass_call(query):
+    name = os.path.join(config.CACHE_DIR, str(zlib.adler32(query.encode())) + '.osm')
+    if os.path.exists(name):
+        with codecs.open(name, 'r', encoding='utf8') as data:
+            return data.read()
+    data = overpass_call(query)
+    save_file(data, name)
+    return data
+```
 
 Ще одним місцем для оптимізації є інтерпретатор Python.
 Значна кількість обчислень в бібліотеці Shapely і так винесена в нативне розширення (основними операціями з геометрією займається бібліотека GEOS, яка написана на C++).
