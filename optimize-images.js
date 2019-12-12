@@ -1,10 +1,13 @@
 const fs = require("fs");
 const path = require("path");
+const util = require('util');
 const sharp = require("sharp");
 const glob = require("glob");
 const imagemin = require("imagemin");
 const imageminJpegtran = require("imagemin-jpegtran");
 const imageminPngquant = require("imagemin-pngquant");
+
+const exists = util.promisify(fs.exists)
 
 const images = path.join(__dirname, "assets/img/*.{jpg,jpeg,png}");
 let outputDir = path.join(__dirname, "assets/optimized-img/");
@@ -22,6 +25,7 @@ const resizeImages = () =>
       const resized = await Promise.all(
         files.map(async inputFile => {
           const optimizedFile = path.join(outputDir, path.basename(inputFile));
+          if (await exists(optimizedFile)) return false
 
           await sharp(inputFile)
             .resize({ width: 960, withoutEnlargement: true })
@@ -34,19 +38,23 @@ const resizeImages = () =>
   });
 
 const optimize = async () => {
-  const toOptimize = await resizeImages();
-  const files = await imagemin(toOptimize, {
-    destination: outputDir,
-    plugins: [
-      imageminJpegtran(),
-      imageminPngquant({
-        quality: [0.6, 0.8]
-      })
-    ]
-  });
-  console.table(
-    files.map(f => ({ file: f.destinationPath, size: toSize(f.data.length) }))
-  );
+  try {
+    const toOptimize = await resizeImages();
+    const files = await imagemin(toOptimize, {
+      destination: outputDir,
+      plugins: [
+        imageminJpegtran(),
+        imageminPngquant({
+          quality: [0.6, 0.8]
+        })
+      ]
+    });
+    console.table(
+      files.map(f => ({ file: f.destinationPath, size: toSize(f.data.length) }))
+    );
+  } catch (e) {
+    console.error('Failed to build images', e)
+  }
 };
 
 optimize();
