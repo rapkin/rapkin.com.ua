@@ -1,4 +1,5 @@
 FROM node:12.10-alpine as build
+RUN apk add build-base autoconf automake libtool nasm make
 WORKDIR /app
 COPY package* /app/
 RUN npm install
