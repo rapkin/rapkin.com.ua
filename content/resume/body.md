@@ -5,9 +5,8 @@
 **Education:**
 
 - _2012-2015_ - Technical College NUWM, specialty: Applied Mathematics
-- _2015-2018_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics
-
-**Current education:** _2018-2020_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics
+- _2015-2018_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics, Bachelor's degree
+- _2018-2020_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics, Master's degree
 
 **Current job:** [UltimateFintech](https://ultimatefintech.com/) (lead front-end developer)
 
