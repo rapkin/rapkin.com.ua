@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-watch",
+    "build:clear": "rm -rf site && mkdir site",
     "build:site": "cuttlebelle watch --silent",
     "build:images": "node optimize-images.js",
     "build:sass": "node-sass --output-style compressed -o assets/css sass/site.scss",
     "build:js": "rollup --config",
     "build:static": "cp -r root/* site/",
-    "build": "npm run build:sass && npm run build:js && npm run build:images && npm run build:static && cuttlebelle",
+    "build": "npm run build:clear && npm run build:sass && npm run build:js && npm run build:images && npm run build:static && cuttlebelle",
     "deploy": "npm run build && node deploy.js",
     "docs": "cuttlebelle docs"
   },
