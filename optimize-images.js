@@ -35,7 +35,7 @@ const resizeImages = () =>
 
           if (!existsOptimized) {
             tasks.push(sharp(inputFile)
-              .resize({ width: 960, withoutEnlargement: true })
+              .resize({ width: 960, height: 2000, fit: sharp.fit.inside, withoutEnlargement: true })
               .toFile(optimizedFile));
             transformed.push(optimizedFile)
           }
@@ -52,7 +52,7 @@ const resizeImages = () =>
           }
 
           await Promise.all(tasks);
-          return files;
+          return transformed;
         })
       );
       resolve(resized.flat().filter(f => f));
