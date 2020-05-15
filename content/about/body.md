@@ -4,7 +4,7 @@ In this blog I would like to share with my little projects, share impressions of
 
 If you have any comments and suggestions I am happy to answer.
 
-Here are some memes (mostly on Russian language) for which I'm not ashamed :)
+Here are several of my memes (mostly on Russian language) for which I'm not ashamed :)
 
 ![Stepenwolf](/assets/img/wolf.jpg)
 
