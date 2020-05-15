@@ -1,5 +1,5 @@
 title: How to project geojson from polar to mercator
-image: /assets/img/Mercator_map.png
+image: /assets/img/Mercator_map.jpg
 date: 2020-05-15 13:42:23
 description: Example how to project geojson file from polar (EPSG:4326 or WGS84) coordinate system to mercator (EPSG:3857) and vise versa. Using python and pyproj
 main: body.md

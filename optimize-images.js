@@ -25,15 +25,37 @@ const resizeImages = () =>
       const resized = await Promise.all(
         files.map(async inputFile => {
           const optimizedFile = path.join(outputDir, path.basename(inputFile));
-          if (await exists(optimizedFile)) return false
+          const previewFile = path.join(outputDir, 'preview_' + path.basename(inputFile));
+          const [existsOptimized, existsPreview] = await Promise.all([exists(optimizedFile), exists(previewFile)]);
 
-          await sharp(inputFile)
-            .resize({ width: 960, withoutEnlargement: true })
-            .toFile(optimizedFile);
-          return optimizedFile;
+          if (existsPreview && existsOptimized) return false;
+
+          const tasks = []
+          const transformed = []
+
+          if (!existsOptimized) {
+            tasks.push(sharp(inputFile)
+              .resize({ width: 960, withoutEnlargement: true })
+              .toFile(optimizedFile));
+            transformed.push(optimizedFile)
+          }
+
+          if (!existsPreview) {
+            tasks.push(sharp(inputFile)
+              .resize({
+                width: 200,
+                height: 200,
+                fit: sharp.fit.cover
+              })
+              .toFile(previewFile));
+            transformed.push(previewFile)
+          }
+
+          await Promise.all(tasks);
+          return files;
         })
       );
-      resolve(resized.filter(f => f));
+      resolve(resized.flat().filter(f => f));
     });
   });
 

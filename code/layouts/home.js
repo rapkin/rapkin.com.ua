@@ -19,15 +19,23 @@ class Home extends Component {
           {Object.values(_pages)
             .filter(item => item.layout === "layouts/post")
             .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .map(({ title, date, description, _url }) => (
+            .map(({ title, date, image, description, _url }) => (
               <div className="post-item" key={_url}>
-                <a href={_url + '/'} className="post-title">
-                  {title}
-                </a>
-                <span className="post-date">
-                  {new Date(date).toDateString()}
-                </span>
-                <p className="post-description">{description}</p>
+                {image && <a class='image-link' href={_url + '/'}>
+                  <img
+                    src={image.replace('/img/', '/optimized-img/preview_')}
+                    width={200} height={200} alt={title} />
+                </a>}
+
+                <div>
+                  <a href={_url + '/'} className="post-title">
+                    {title}
+                  </a>
+                  <span className="post-date">
+                    {new Date(date).toDateString()}
+                  </span>
+                  <p className="post-description">{description}</p>
+                </div>
               </div>
             ))}
         </div>
