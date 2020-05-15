@@ -10,7 +10,7 @@ Structure of geojson file is quite simple. To work with geojson we can use stand
 pip install pyproj
 ```
 
-Pyproj provides APIs to convert pair of coordinates. Projection of single point will looks like:
+Pyproj provides APIs to convert pair of coordinates. Projection of single point will look like:
 
 ```python
 polar = pyproj.Proj(init='epsg:4326')
@@ -38,7 +38,7 @@ def project_coords(coords, from_proj, to_proj):
     return new_coords
 ```
 
-Actually you can use this example to convert geojson files with different projections. More details about this in [pyproj documentation](https://pyproj4.github.io/pyproj/stable/examples.html).
+Actually you can use this example to convert geojson files with different projections. More details about this you can find in [pyproj documentation](https://pyproj4.github.io/pyproj/stable/examples.html).
 
 Full code snippet of convertation from Polar projection (EPSG:4326) to Pseudo-Mercator (WGS84 or EPSG:3857) and vise versa:
 
