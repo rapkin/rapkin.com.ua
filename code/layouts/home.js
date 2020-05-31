@@ -21,7 +21,7 @@ class Home extends Component {
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .map(({ title, date, image, description, _url }) => (
               <div className="post-item" key={_url}>
-                {image && <a class='image-link' href={_url + '/'}>
+                {image && <a className='image-link' href={_url + '/'}>
                   <img
                     src={image.replace('/img/', '/optimized-img/preview_')}
                     width={200} height={200} alt={title} />
