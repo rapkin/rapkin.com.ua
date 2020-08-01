@@ -45,9 +45,9 @@ Social integration:
 
 ![Social integration](/assets/img/antisocial.png)
 
-Link to Goolag:
+Link to Gulag:
 
-![Link to Goolag](/assets/img/goolag.jpg)
+![Link to Gulag](/assets/img/goolag.jpg)
 
 And my favorite:
 

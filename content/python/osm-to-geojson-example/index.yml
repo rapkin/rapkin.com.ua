@@ -1,0 +1,5 @@
+title: How to extract information about fishing places from OSM with Python and osm2geojson
+image: /assets/img/fishing.jpg
+date: 2020-05-24 17:23:42
+description: Example how to extract information about fishing places in Ukraine from OpenStreetMap using Python and osm2geojson
+main: body.md
