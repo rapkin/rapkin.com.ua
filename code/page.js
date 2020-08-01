@@ -29,7 +29,7 @@ const articleMeta = ({ image, title, date }) => {
         url: bunny
       }
     },
-    image: image || bunny;
+    image: image || bunny,
     name: title
   };
   return JSON.stringify(data);
