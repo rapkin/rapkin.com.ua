@@ -11,6 +11,7 @@ const email = "mikola.parfenyuck@gmail.com";
 const twitterUser = "i_rapkin";
 const githubUser = "rapkin";
 const siteName = "@rapkin | Software developer";
+const bunny = getImagePath("/assets/img/bunny.png", true)
 
 const articleMeta = ({ image, title, date }) => {
   const data = {
@@ -25,12 +26,12 @@ const articleMeta = ({ image, title, date }) => {
       url: "https://rapkin.com.ua",
       logo: {
         "@type": "ImageObject",
-        url: getImagePath("/assets/img/bunny.png", true)
+        url: bunny
       }
     },
     name: title
   };
-  if (image) data.image = image;
+  if (image) data.image = image || bunny;
   return JSON.stringify(data);
 };
 
