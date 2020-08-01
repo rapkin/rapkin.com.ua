@@ -29,9 +29,9 @@ const articleMeta = ({ image, title, date }) => {
         url: bunny
       }
     },
+    image: image || bunny;
     name: title
   };
-  if (image) data.image = image || bunny;
   return JSON.stringify(data);
 };
 
