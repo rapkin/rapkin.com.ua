@@ -29,7 +29,7 @@ const articleMeta = ({ image, title, date }) => {
         url: bunny
       }
     },
-    image: image || bunny,
+    image: image,
     name: title
   };
   return JSON.stringify(data);
@@ -45,7 +45,7 @@ const Page = ({
   _relativeURL,
   _ID
 }) => {
-  image = getImagePath(image, true);
+  image = getImagePath(image, true) || bunny;
 
   return (
     <html lang="en">
