@@ -672,10 +672,10 @@ $ coffee server
 
 ## Список використаної літератури
 
-1. Офіційна документація до СУБД **MongoDB** - [http://docs.mongodb.org/manual/](http://docs.mongodb.org/manual/)
+1. Офіційна документація до СУБД **MongoDB** - [https://docs.mongodb.org/manual/](https://docs.mongodb.org/manual/)
 2. Офіційна документація по **Node.js** - [https://nodejs.org/api/](https://nodejs.org/api/)
-3. Офіційна документація мови **CoffeeScript** - [http://coffeescript.org/](http://coffeescript.org/)
+3. Офіційна документація мови **CoffeeScript** - [https://coffeescript.org/](https://coffeescript.org/)
 4. Документація до неофіційного драйверу MongoDB для Node.js (**Mongojs**) - [https://github.com/mafintosh/mongojs](https://github.com/mafintosh/mongojs)
-5. Офіційна документація до бібліотеки **Express.js** - [http://expressjs.com/4x/api.html](http://expressjs.com/4x/api.html)
-6. Офіційна документація по шаблонізатору **Jade** - [http://jade-lang.com/reference/](http://jade-lang.com/reference/)
-7. Офіційна документація до препроцесора **Stylus** - [http://learnboost.github.io/stylus/](http://learnboost.github.io/stylus/)
+5. Офіційна документація до бібліотеки **Express.js** - [http://expressjs.com/en/4x/api.html](http://expressjs.com/en/4x/api.html)
+6. Офіційна документація по шаблонізатору **Jade** - [https://jade-lang.com/reference/](https://jade-lang.com/reference/)
+7. Офіційна документація до препроцесора **Stylus** - [https://stylus-lang.com/](https://stylus-lang.com/)
