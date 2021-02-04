@@ -67,6 +67,7 @@ const Page = ({
 
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content={siteName} />
+        <meta itemProp="og:title" content={title} />
         <meta itemProp="name" content={title} />
 
         <meta name="author" content={author} />
@@ -74,6 +75,7 @@ const Page = ({
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content={"@" + twitterUser} />
+        <meta name="twitter:title" content={title} />
 
         <meta name="description" content={description} />
         <meta itemProp="description" content={description} />
