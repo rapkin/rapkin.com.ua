@@ -1,3 +1,9 @@
+<a href='/assets/img/photo.jpg' target='_blank'>
+    <img class='avatar-photo' width='200' height='200' alt='My photo' src='/assets/optimized-img/preview_photo.jpg'>
+</a>
+
+**Mikola Parfenyuck**
+
 **Place of residence:** Rivne, Ukraine
 
 **Year of birth:** 1997
