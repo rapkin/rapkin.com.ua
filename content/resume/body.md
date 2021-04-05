@@ -1,4 +1,4 @@
-<a href='/assets/img/photo.jpg' target='_blank'>
+<a href='/assets/img/photo.jpg' target='_blank' rel='noopener'>
     <img class='avatar-photo' width='200' height='200' alt='My photo' src='/assets/optimized-img/preview_photo.jpg'>
 </a>
 
@@ -41,7 +41,7 @@ Knowledge of English at good level (C2 by EFSET).
 ## Portfolio
 
 <div class='post-item'>
-    <a class='image-link' href='/assets/img/vr-event.png' target='_blank'>
+    <a class='image-link' href='/assets/img/vr-event.png' target='_blank' rel='noopener'>
         <img width='200' height='200' alt='virtual vision website' src='/assets/optimized-img/preview_vr-event.png'>
     </a>
     <div>
@@ -55,7 +55,7 @@ Knowledge of English at good level (C2 by EFSET).
 </div>
 
 <div class='post-item'>
-    <a class='image-link' href='/assets/img/virtual_vision.png' target='_blank'>
+    <a class='image-link' href='/assets/img/virtual_vision.png' target='_blank' rel='noopener'>
         <img width='200' height='200' alt='virtual vision website' src='/assets/optimized-img/preview_virtual_vision.png'>
     </a>
     <div>
@@ -71,7 +71,7 @@ Knowledge of English at good level (C2 by EFSET).
 </div>
 
 <div class='post-item'>
-    <a class='image-link' href='/assets/img/ifxexpo.jpg' target='_blank'>
+    <a class='image-link' href='/assets/img/ifxexpo.jpg' target='_blank' rel='noopener'>
         <img width='200' height='200' alt='ifxexpo website' src='/assets/optimized-img/preview_ifxexpo.jpg'>
     </a>
     <div>
