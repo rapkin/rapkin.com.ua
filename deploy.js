@@ -4,7 +4,7 @@ ghpages.publish(
   "site",
   {
     branch: "master",
-    repo: "https://github.com/rapkin/rapkin.github.io.git"
+    repo: "git@github.com:rapkin/rapkin.github.io.git"
   },
   function(err) {
     if (err) {

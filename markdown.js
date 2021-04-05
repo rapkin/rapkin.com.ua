@@ -12,7 +12,7 @@ module.exports = exports = function renderer({ Marked, _relativeURL }) {
 
   Marked.link = (href, title, text) => {
     const target = href.match(/^https?:/i)
-      ? 'target="_blank" rel="noopener"'
+      ? 'target="_blank" rel="noopener noreferrer"'
       : "";
     title = title ? `title="${title}"` : "";
     return `<a href="${href}" ${target} ${title}>${text}</a>`;
