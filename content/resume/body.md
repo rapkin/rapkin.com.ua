@@ -4,7 +4,7 @@
 
 **Mikola Parfenyuck**
 
-**Place of residence:** Rivne, Ukraine
+**Place of residence:** Kyiv, Ukraine
 
 **Year of birth:** 1997
 
@@ -49,7 +49,7 @@ Knowledge of English at good level (C2 by EFSET).
         <p>
             Architecture and development of a platform for online virtual events (with 3D scenes, chats, video streams, notifications etc).
             <br/>
-            Used: Next.js, React, TypeScript, Three.js, React Hook Form.
+            Used: Next.js, React, TypeScript, Mobx (mobx-state-tree) Three.js, React Hook Form.
         </p>
     </div>
 </div>
@@ -65,7 +65,7 @@ Knowledge of English at good level (C2 by EFSET).
             <br/>
             Used: Next.js, React, TypeScript.
             <br/>
-            <a class='visit-link' href='https://ifxexpo.com/cyprus2020/virtual-vision/' target='_blank' rel='noopener noreferrer' />Visit website</a>
+            <a class='visit-link' href='/assets/img/virtual_vision_full.png' target='_blank' rel='noopener noreferrer' />View full screenshot</a>
         </p>
     </div>
 </div>
