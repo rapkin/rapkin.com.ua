@@ -33,7 +33,7 @@
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@swup/slide-theme": "^1.0.5",
-    "cuttlebelle": "^1.0.0-alpha.67",
+    "cuttlebelle": "^1.0.0-alpha.79",
     "gh-pages": "^2.1.1",
     "glob": "^7.1.4",
     "highlight.js": "^10.4.1",
