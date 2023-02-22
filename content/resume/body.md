@@ -4,59 +4,93 @@
 
 **Mikola Parfenyuck**
 
-**Place of residence:** Kyiv, Ukraine
+**Place of residence:** Rivne, Ukraine
 
 **Year of birth:** 1997
 
-**Education:**
+**Current job:** [Livegistics](https://livegistics.com/) - Senior Software Developer.
 
-- _2012-2015_ - Technical College NUWM, specialty: Applied Mathematics
-- _2015-2018_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics, Bachelor's degree
-- _2018-2020_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics, Master's degree
-- _2020-2024_ - The National University of Water and Environmental Engineering, specialty: Computer Science, Ph.D.
 
-**Current job:** [EOS DATA ANALYTICS INC.](https://eos.com/) (front-end developer in RnD)
+## Summary
+
+Experienced in designing web-based applications, server-side technologies, and neural networks
+Recognized expertise in Unix, databases (MongoDB, MySQL, PostgreSQL), UX/UI, and responsive web design.
+Ph.D. candidate in Computer Science with strong technical background in React, TypeScript, Python, and Node.js.
+Highly skilled in automation and keeping code clean.
 
 
 ## Skills
 
-I work in the web over 7 years. During this time I have worked with different server technologies (Python, Node.js) and of course with client-side.
+__Front-end__: TypeScript, React, Next.js, Mobx, Redux, MaterialUI, Styled Components
 
-Currently I'm actively working with **JavaScript/TypeScript** and **Python**.
-Highly skilled in designing web-based applications.
-Recognized experience in Unix, databases (Mongodb, MySQL, PostgreSQL), neural networks, UX/UI and responsive web design.
-Strong technical background with **Node.js**, **React** and **TypeScript**.
-Such technologies as **Express**, **Webpack**, **Yarn**, **Mobx**, **Redux**, **Next.js**, **Leaflet**, **Mapbox.js**, **Three.js**, **SASS**, **Styled Components**, **Ansible**, **Docker** are not new for me.
+__Back-end__: Node.js, Python, Express, TSOA, Swagger, Kubernetes, Firestore, PostgreSQL, Mongodb, Redis
 
-Knowledge of English at good level (C2 by EFSET).
+__Other__: Unix, neural networks, data science, GIS, UX/UI, responsive web design, English (C2 by EFSET)
+
+
+## Jobs
+
+__Livegistics__ - (Sep 2021 - present) Senior Software Developer, responsible for developing web applications. Tech stack: TypeScript, React, React Native, Redux, Mobx, MaterialUI, Express.js, TSOA, Swagger, Kubernetes, Firestore, PostgreSQL, Redis.
+
+__EOS Data Analytics__ - (Jul 2020 - present) Software Developer and Scientist. Research and development in the area of Computer Vision. Tech stack: Python, PyTorch, Numpy, Pandas, TensorFlow, QGIS.
+
+__Ultimatefintech__ - (Mar 2019 - Jan 2021) Lead Front-end Developer, responsible for leading the development of several projects, including Virtual Vision and iFX EXPO International 2020.
+ Tech stack: TypeScript, React, Next.js, Vue.js, Nuxt.js, Mobx.
+
+__Freelance__ - (Dec 2015 - Sep 2021) Software development of various web projects. Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoDB.
+
+
+## Education
+
+- _2020-2024_ - The National University of Water and Environmental Engineering, specialty: Computer Science, Ph.D.
+- _2018-2020_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics, Master's degree
+- _2015-2018_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics, Bachelor's degree
+- _2012-2015_ - Technical College NUWM, specialty: Applied Mathematics
 
 
 ## Open source projects
 
-- **osm2geojson** - Lib to parse OSM and Overpass JSON with python. More details in [github repository](https://github.com/aspectumapp/osm2geojson).
+- **osm2geojson** - Library to parse OSM and Overpass JSON with Python. More details in [GitHub repository](https://github.com/aspectumapp/osm2geojson).
 
-- **gulp-bootstrap-configurator** - Plugin for Gulp to build Bootstrap. More details in [github repository](https://github.com/rapkin/gulp-bootstrap-configurator).
+- **gulp-bootstrap-configurator** - Plugin for Gulp to build Bootstrap. More details in [GitHub repository](https://github.com/rapkin/gulp-bootstrap-configurator).
+
+- **Stand For Ukraine** - A website with information about verified NPOs in Ukraine where you can donate. You can visit that website by following the link [standforukraine.com](https://standforukraine.com/). Source code located on [GitHub](https://github.com/rapkin/gulp-bootstrap-configurator).
 
 
 ## Portfolio
 
 <div class='post-item'>
+    <a class='image-link' href='/assets/img/standforukraine.png' target='_blank' data-no-swup>
+        <img width='200' height='200' alt='Stand For Ukraine website' src='/assets/optimized-img/preview_standforukraine.png'>
+    </a>
+    <div>
+        <h3>Stand For Ukraine website</h3>
+        <p>
+            Architecture and development of a website.
+            <br/>
+            Used: Next.js, React, TypeScript, Styled Components.
+            <a class='visit-link' href='https://standforukraine.com/' target='_blank' rel='noopener noreferrer'>Visit website</a>
+        </p>
+    </div>
+</div>
+
+<div class='post-item'>
     <a class='image-link' href='/assets/img/vr-event.png' target='_blank' data-no-swup>
-        <img width='200' height='200' alt='virtual vision website' src='/assets/optimized-img/preview_vr-event.png'>
+        <img width='200' height='200' alt='Virtual event platform' src='/assets/optimized-img/preview_vr-event.png'>
     </a>
     <div>
         <h3>Virtual event platform</h3>
         <p>
-            Architecture and development of a platform for online virtual events (with 3D scenes, chats, video streams, notifications etc).
+            Architecture and development of a platform for online virtual events (with 3D scenes, chats, video streams, notifications, etc.).
             <br/>
-            Used: Next.js, React, TypeScript, Mobx (mobx-state-tree) Three.js, React Hook Form.
+            Used: Next.js, React, TypeScript, Mobx (mobx-state-tree), Three.js, React Hook Form.
         </p>
     </div>
 </div>
 
 <div class='post-item'>
     <a class='image-link' href='/assets/img/virtual_vision.png' target='_blank' data-no-swup>
-        <img width='200' height='200' alt='virtual vision website' src='/assets/optimized-img/preview_virtual_vision.png'>
+        <img width='200' height='200' alt='Virtual Vision landing page' src='/assets/optimized-img/preview_virtual_vision.png'>
     </a>
     <div>
         <h3>Virtual Vision landing page</h3>
@@ -64,25 +98,23 @@ Knowledge of English at good level (C2 by EFSET).
             Development and optimization for mobile devices.
             <br/>
             Used: Next.js, React, TypeScript.
-            <br/>
-            <a class='visit-link' href='/assets/img/virtual_vision_full.png' target='_blank' rel='noopener noreferrer' />View full screenshot</a>
         </p>
     </div>
 </div>
 
 <div class='post-item'>
     <a class='image-link' href='/assets/img/ifxexpo.jpg' target='_blank' data-no-swup>
-        <img width='200' height='200' alt='ifxexpo website' src='/assets/optimized-img/preview_ifxexpo.jpg'>
+        <img width='200' height='200' alt='iFX EXPO website' src='/assets/optimized-img/preview_ifxexpo.jpg'>
     </a>
     <div>
         <h3>iFX EXPO International 2020 website</h3>
         <p>
             Full website redesign and codebase refactoring.
-            Solved different bussines problems, added custom floor plan (interactive map), complex registration and much more.
+            Solved different business problems, added custom floor plan (interactive map), complex registration, and much more.
             <br/>
             Used: Nuxt.js, Vue.js, SCSS.
             <br/>
-            <a class='visit-link' href='https://ifxexpo.com/cyprus2020/' target='_blank' rel='noopener noreferrer' />Visit website</a>
+            The website is no longer online. The link was https://ifxexpo.com/cyprus2020/.
         </p>
     </div>
 </div>
@@ -90,20 +122,21 @@ Knowledge of English at good level (C2 by EFSET).
 
 ## Personal skills
 
-- responsible
-- sociable
-- adequate
-- neat
-- balanced
-- calm
-- hardworking
-- keep code clean
-- automate the development process
-- versed in a strange code
-- have no bad habits
+- Responsible
+- Sociable
+- Adequate
+- Neat
+- Balanced
+- Calm
+- Hardworking
+- Keep code clean
+- Automate the development process
+- Versed in a strange code
+- Have no bad habits
+
 
 ## Interests
 
-I like to experience something new, follow trends in web design.
+I like to experience new things and keep up with trends in web design.
 My passion is geospatial data analysis.
-Also I love to make memes (but that's another story).
+I also love to create memes (but that's another story).
