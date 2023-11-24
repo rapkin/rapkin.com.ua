@@ -14,7 +14,7 @@
 ## Summary
 
 Experienced in designing web-based applications, server-side technologies, and neural networks
-Recognized expertise in Unix, databases (MongoDB, MySQL, PostgreSQL), UX/UI, and responsive web design.
+Recognized expertise in Unix, databases (PostgreSQL, MongoDB, MySQL), UX/UI, and responsive web design.
 Ph.D. candidate in Computer Science with strong technical background in React, TypeScript, Python, and Node.js.
 Highly skilled in automation and keeping code clean.
 
@@ -23,16 +23,16 @@ Highly skilled in automation and keeping code clean.
 
 __Front-end__: TypeScript, React, Next.js, Mobx, Redux, MaterialUI, Styled Components
 
-__Back-end__: Node.js, Python, Express, TSOA, Swagger, Kubernetes, Firestore, PostgreSQL, Mongodb, Redis
+__Back-end__: Node.js, Python, Express, TSOA, Swagger, Prisma, Kubernetes, Firestore, PostgreSQL, MongoDB, Redis
 
 __Other__: Unix, neural networks, data science, GIS, UX/UI, responsive web design, English (C2 by EFSET)
 
 
 ## Jobs
 
-__Livegistics__ - (Sep 2021 - present) Senior Software Developer, responsible for developing web applications. Tech stack: TypeScript, React, React Native, Redux, Mobx, MaterialUI, Express.js, TSOA, Swagger, Kubernetes, Firestore, PostgreSQL, Redis.
+__Livegistics__ - (Sep 2021 - present) Senior Software Developer, responsible for developing web applications, architecture and infrastructure of web services. Tech stack: TypeScript, React, React Native, Redux, Mobx, MaterialUI, Express.js, TSOA, Swagger, Prisma, Kubernetes, Firestore, PostgreSQL, Redis.
 
-__EOS Data Analytics__ - (Jul 2020 - present) Software Developer and Scientist. Research and development in the area of Computer Vision. Tech stack: Python, PyTorch, Numpy, Pandas, TensorFlow, QGIS.
+__EOS Data Analytics__ - (Jul 2020 - Aug 2023) Software Developer and Scientist. Research and development in the area of Computer Vision. Tech stack: Python, PyTorch, Numpy, Pandas, TensorFlow, QGIS, React, TypeScript, MongoDB.
 
 __Ultimatefintech__ - (Mar 2019 - Jan 2021) Lead Front-end Developer, responsible for leading the development of several projects, including Virtual Vision and iFX EXPO International 2020.
  Tech stack: TypeScript, React, Next.js, Vue.js, Nuxt.js, Mobx.
@@ -58,6 +58,26 @@ __Freelance__ - (Dec 2015 - Sep 2021) Software development of various web projec
 
 
 ## Portfolio
+
+<div class='post-item'>
+    <a class='image-link' href='/assets/img/livegistics.png' target='_blank' data-no-swup>
+        <img width='200' height='200' alt='Livegistics logo' src='/assets/optimized-img/preview_livegistics.png'>
+    </a>
+    <div>
+        <h3>Livegistics LTS web and mobile applications</h3>
+        <p>
+            Architecture and development of a web platform.
+            There are numerous applications in this ecosystem,
+            and I had a chance to work on every part of this ecosystem.
+            From implementing new features and user interface on mobile and web applications
+            to infrastructure setup with Ansible and Kubernetes. My main focus for the last few months
+            was the database schema and API layer.
+            <br/>
+            Used: React, TypeScript, Material UI, Redux, React Native, Mobx, PostgreSQL, Firestore, Prisma, TSOA, Swagger, Jest, Kubernetes, Ansible, Grafana.
+            <a class='visit-link' href='https://livegistics.com/' target='_blank' rel='noopener noreferrer'>Visit website</a>
+        </p>
+    </div>
+</div>
 
 <div class='post-item'>
     <a class='image-link' href='/assets/img/standforukraine.png' target='_blank' data-no-swup>
