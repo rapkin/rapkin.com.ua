@@ -7,7 +7,7 @@ This guide helps AI coding assistants understand and work with this static blog 
 This is a **static blog** built with:
 - **Cuttlebelle** - Static site generator using React components
 - **React** - For templating (JSX components compile to static HTML)
-- **SCSS** - Styling with node-sass
+- **SCSS** - Styling with Dart Sass (modern replacement for node-sass)
 - **Rollup** - JavaScript bundler
 - **Sharp/Imagemin** - Image optimization
 - **Docker** - For deployment
@@ -373,9 +373,10 @@ npm run build:site    # Generate HTML
 - Ensure `index.yml` has all required fields
 
 **Build fails**:
-- Run `npm install` to ensure dependencies
-- Check Node version compatibility (project uses Node 12+)
+- Run `npm install --legacy-peer-deps` to ensure dependencies
+- Project works with Node.js v22+ (uses modern Dart Sass)
 - Look for syntax errors in JSX components
+- If you see peer dependency errors, use `--legacy-peer-deps` flag
 
 ## Technical Details
 
@@ -383,7 +384,7 @@ npm run build:site    # Generate HTML
 
 **Core Tools**:
 - `cuttlebelle` - Static site generator
-- `node-sass` - SCSS compiler
+- `sass` (Dart Sass) - Modern SCSS compiler (replaced deprecated node-sass)
 - `rollup` - Module bundler
 - `sharp` - Image processing
 - `imagemin` - Image compression

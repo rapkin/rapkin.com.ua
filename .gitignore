@@ -4,5 +4,6 @@
 /site/
 
 assets/css/site.css
+assets/css/site.css.map
 assets/js/bundle.js
 .DS_Store
