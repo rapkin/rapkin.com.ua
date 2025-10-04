@@ -449,7 +449,6 @@ Based on existing content analysis, here are the author's preferences:
 - Step-by-step algorithm/approach explanation
 - Detailed code snippets with explanations
 - Visual examples (images, diagrams)
-- Sometimes interactive visualizations (iframes from Aspectum)
 - Conclusions/summary at the end
 
 ### Code Style
