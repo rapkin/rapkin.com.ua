@@ -94,7 +94,7 @@ def katana(shape, threshold, count=0):
     final_result = []
     for g in result:
         if isinstance(g, geometry.MultiPolygon):
-            final_result.extend(g)
+            final_result.extend(g.geoms)
         else:
             final_result.append(g)
     return final_result
@@ -105,7 +105,7 @@ def overpass_call(query):
     r = requests.post(OVERPASS,
                       data=f"data={encoded}",
                       headers={'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
-    if not r.status_code is 200:
+    if r.status_code != 200:
         raise requests.exceptions.HTTPError('Overpass server respond with status '+str(r.status_code))
     return r.text
 
@@ -134,9 +134,11 @@ def get_features_inside_shape(geojson_data, border_shape):
     inside_shape = []
     for feature in geojson_data['features']:
         shape = geometry.shape(feature['geometry'])
-        for segment in tree.query(shape):
-            if segment.contains(shape):
+        indices = tree.query(shape)
+        for idx in indices:
+            if optimized_shapes[idx].contains(shape):
                 inside_shape.append(feature)
+                break
     geojson_data['features'] = inside_shape
     return geojson_data
 
@@ -184,6 +186,10 @@ save_data(data, 'fishing_places_ukraine.geojson')
 
 In this code you can notice some optimizations inside `get_features_inside_shape`. We need this to perform geospatial queries (like intersection) faster. Here used `katana` method to split large geometries into parts, you can find more information in this article [Splitting large polygons for faster intersections](https://snorfalorpagus.net/blog/2016/03/13/splitting-large-polygons-for-faster-intersections/). Other optimization is R-tree packed using the Sort-Tile-Recursive algorithm ([documentation about STRtree in shapely](https://shapely.readthedocs.io/en/stable/manual.html#str-packed-r-tree)).
 
-The generated dataset shows that the number of places suitable for fishing is very small (although in reality there are many more). And this is even more motivating to add new information to the OSM.
+The generated dataset visualization:
+
+![Fishing places in Ukraine](/assets/img/fishing-zones.png)
+
+The map shows that the number of places suitable for fishing is very small (although in reality there are many more). And this is even more motivating to add new information to the OSM.
 
 _* All code in this article provided under MIT license_
