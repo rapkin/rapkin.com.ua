@@ -4,33 +4,36 @@
 
 **Mikola Parfenyuck**
 
-**Place of residence:** Rivne, Ukraine
+**Place of residence:** Lviv, Ukraine
 
 **Year of birth:** 1997
 
-**Current job:** [Livegistics](https://livegistics.com/) - Senior Software Developer.
+**Current job:** [Livegistics](https://livegistics.com/) - Senior Full-Stack Developer.
 
 
 ## Summary
 
-Experienced in designing web-based applications, server-side technologies, and neural networks.
-Recognized expertise in Unix, databases (PostgreSQL, MongoDB, MySQL), UX/UI, and responsive web design.
+Full-stack developer with 10+ years of experience designing web-based applications, complex backend architecture, and AI integrations.
+Currently contributing 3+ years at Livegistics, specializing in database design (Prisma, PostgreSQL), cloud infrastructure (GCP, Docker), security & compliance (SOC 2, Ory), and modern UI development (React, Radix UI, Tailwind CSS).
 Ph.D. candidate in Computer Science with a strong technical background in React, TypeScript, Python, and Node.js.
+Specialized in building production-ready systems with AI-powered document extraction and relational data mapping.
 Highly skilled in automation and keeping code clean.
 
 
 ## Skills
 
-__Front-end__: TypeScript, React, Next.js, Mobx, Redux, Material UI, Styled Components
+__Front-end__: TypeScript, React, Next.js, Radix UI, Tailwind CSS, React Query, Mobx, Redux, Material UI, Styled Components
 
-__Back-end__: Node.js, Python, Express, TSOA, Swagger, Prisma, Kubernetes, Firestore, PostgreSQL, MongoDB, Redis
+__Back-end__: Node.js, Python, Express, TSOA, Swagger, Prisma, PostgreSQL, MongoDB, Redis, Firestore, Ory (authentication)
 
-__Other__: Unix, neural networks, data science, GIS, UX/UI, responsive web design, English (C2 by EFSET)
+__DevOps & Cloud__: Docker, Google Cloud Platform (GCP), Cloud Run, Kubernetes, SOC 2 compliance
+
+__Other__: AI integration (document/ticket data extraction), neural networks, data science, GIS, UX/UI, responsive web design, English (C2 by EFSET)
 
 
 ## Jobs
 
-__Livegistics__ - (Sep 2021 - present) Senior Software Developer, responsible for developing web applications, architecture, and infrastructure of web services. Tech stack: TypeScript, React, React Native, Redux, Mobx, Material UI, Express.js, TSOA, Swagger, Prisma, Kubernetes, Firestore, PostgreSQL, Redis.
+__Livegistics__ - (Sep 2021 - present) Full-Stack Developer, responsible for full-stack development, backend architecture, complex database design (Prisma), AI integration for document/ticket data extraction, cloud infrastructure (GCP, Cloud Run), and security compliance (SOC 2). Leading development of web and mobile applications with modern UI (Radix UI, Tailwind CSS, React Query) and robust backend systems with Ory authentication. Tech stack: TypeScript, React, React Native, Radix UI, Tailwind CSS, React Query, Redux, Mobx, Material UI, Express.js, TSOA, Swagger, Prisma, Ory, Docker, GCP, Cloud Run, Kubernetes, PostgreSQL, Firestore, Redis.
 
 __EOS Data Analytics__ - (Jul 2020 - Aug 2023) Software Developer and Scientist. Research and development in the area of Computer Vision. Tech stack: Python, PyTorch, NumPy, Pandas, TensorFlow, QGIS, React, TypeScript, MongoDB.
 
@@ -66,14 +69,13 @@ __Freelance__ - (Dec 2015 - Sep 2021) Software development of various web projec
     <div>
         <h3>Livegistics LTS web and mobile applications</h3>
         <p>
-            Architecture and development of a web platform.
-            There are numerous applications in this ecosystem,
-            and I had a chance to work on every part of this ecosystem.
-            From implementing new features and user interface on mobile and web applications
-            to infrastructure setup with Ansible and Kubernetes. My main focus for the last few months
-            was the database schema and API layer.
+            Full-stack development and architecture of a comprehensive logistics platform with 3+ years of contributions.
+            Led development across the entire ecosystem: modern UI with Radix UI and Tailwind CSS, complex relational database design with Prisma,
+            AI-powered document/ticket data extraction, cloud infrastructure on GCP with Docker and Cloud Run, and SOC 2 compliance implementation.
+            Implemented secure authentication with Ory, optimized data fetching with React Query, and built robust API layer with TSOA.
+            Worked on every part of the stack from mobile and web applications to infrastructure setup.
             <br/>
-            Used: React, TypeScript, Material UI, Redux, React Native, Mobx, PostgreSQL, Firestore, Prisma, TSOA, Swagger, Jest, Kubernetes, Ansible, Grafana.
+            Used: React, TypeScript, Radix UI, Tailwind CSS, React Query, Material UI, Redux, React Native, Mobx, PostgreSQL, Firestore, Prisma, TSOA, Swagger, Ory, Docker, GCP, Cloud Run, Jest, Kubernetes, Ansible, Grafana.
             <a class='visit-link' href='https://livegistics.com/' target='_blank' rel='noopener noreferrer'>Visit website</a>
         </p>
     </div>

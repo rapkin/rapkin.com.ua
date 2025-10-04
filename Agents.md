@@ -463,11 +463,18 @@ Based on existing content analysis, here are the author's preferences:
 - camelCase for variables and functions
 - Modern ES6+ syntax
 - Functional components (not class components)
+- React hooks patterns (React Query for data fetching)
 - Clean, readable code with minimal nesting
 - Meaningful variable names
+- TypeScript for type safety
+- Modern UI libraries: Radix UI primitives, Tailwind CSS for styling
 
 ### Technical Preferences
-- **Focus areas**: Python, GIS/mapping, Neural Networks, OpenStreetMap, React/TypeScript
+- **Focus areas**: Full-stack development (React/TypeScript, Node.js), Python, GIS/mapping, Neural Networks, OpenStreetMap, AI integration
+- **Backend expertise**: Prisma schema design, PostgreSQL, complex relational databases, API architecture, authentication (Ory)
+- **Frontend expertise**: React, Radix UI, Tailwind CSS, React Query, TypeScript
+- **DevOps & Infrastructure**: Docker, Google Cloud Platform (GCP), Cloud Run, SOC 2 compliance
+- **AI/ML**: Document/ticket data extraction, AI integration in production systems, neural networks
 - **No unnecessary complexity**: Practical, working solutions over clever tricks
 - **Open source friendly**: Credits libraries, links to documentation
 - **Real-world examples**: Prefers actual use cases over toy examples
@@ -475,7 +482,8 @@ Based on existing content analysis, here are the author's preferences:
 ### Content Categories
 - **python/**: GIS, data processing, Python libraries
 - **coffee/**: CoffeeScript projects (historical)
-- **neural-networks/**: ML/AI topics, training techniques
+- **neural-networks/**: ML/AI topics, training techniques, AI integration
+- Potential new categories: full-stack development, DevOps/cloud infrastructure, database architecture
 - Consider creating new categories if topic doesn't fit existing ones
 
 ### Metadata Standards
@@ -509,13 +517,22 @@ When user says:
 ## Author Profile
 
 **Mikola Parfenyuck (@rapkin)**
-- Location: Rivne, Ukraine
-- Ph.D. candidate in Computer Science (2020-2024)
-- Senior Software Developer at Livegistics
-- Passionate about: geospatial data analysis, neural networks, philosophy, and creating memes
-- Languages: Ukrainian (native), English (C2 level)
-- Personality: Detail-oriented, thorough, values clean code and automation
-- Created open source projects: osm2geojson, gulp-bootstrap-configurator, Stand For Ukraine
+- **Location**: Lviv, Ukraine
+- **Experience**: 10+ years in software development
+- **Current Role**: Full-Stack Developer at Livegistics (3+ years)
+- **Education**: Ph.D. candidate in Computer Science (2020-2024)
+- **Expertise**:
+  - Full-stack development (React, TypeScript, Node.js)
+  - Backend architecture & complex database design (Prisma, PostgreSQL)
+  - Cloud infrastructure (GCP, Docker, Cloud Run)
+  - Security & compliance (SOC 2, Ory authentication)
+  - AI integration (document/ticket data extraction in logistics)
+  - Frontend: Radix UI, Tailwind CSS, React Query
+  - Data science: GIS, neural networks, OpenStreetMap
+- **Languages**: Ukrainian (native), English (C2 level)
+- **Personality**: Detail-oriented, thorough, values clean code and automation
+- **Open Source**: osm2geojson, gulp-bootstrap-configurator, Stand For Ukraine
+- **Passions**: Geospatial data analysis, neural networks, philosophy, and creating memes
 
 ## Notes
 
