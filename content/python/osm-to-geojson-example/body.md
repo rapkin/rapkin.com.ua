@@ -184,10 +184,6 @@ save_data(data, 'fishing_places_ukraine.geojson')
 
 In this code you can notice some optimizations inside `get_features_inside_shape`. We need this to perform geospatial queries (like intersection) faster. Here used `katana` method to split large geometries into parts, you can find more information in this article [Splitting large polygons for faster intersections](https://snorfalorpagus.net/blog/2016/03/13/splitting-large-polygons-for-faster-intersections/). Other optimization is R-tree packed using the Sort-Tile-Recursive algorithm ([documentation about STRtree in shapely](https://shapely.readthedocs.io/en/stable/manual.html#str-packed-r-tree)).
 
-Visualisation of generated dataset:
-
-<iframe title="Інтерактивна карта зі згладженими класифікованими зонами" class="lazyload" data-src="https://aspectum.com/app/maps/embed/fb73004f-8ba0-44e4-b2ff-8021b7dfe92c" width="960" height="600" frameborder="0" style="border: 0"></iframe>
-
-This map shows that the number of places suitable for fishing is very small (although in reality there are many more). And this is even more motivating to add new information to the OSM.
+The generated dataset shows that the number of places suitable for fishing is very small (although in reality there are many more). And this is even more motivating to add new information to the OSM.
 
 _* All code in this article provided under MIT license_

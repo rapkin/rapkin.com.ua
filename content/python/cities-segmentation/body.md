@@ -11,7 +11,7 @@ layout: layouts/post
 
 ## Що нам потрібно для цього?
 
-Якщо коротко то Python (Cython), Shapely, OSM/Overpass та Aspectum щоб робити візуалізацію.
+Якщо коротко то Python (Cython), Shapely, OSM/Overpass та QGIS щоб робити візуалізацію.
 А тепер по кожному пункту:
 
 - **Python** — насправді можна спробувати і іншою мовою зробити аналогічне (наприклад використавши JavaScript та Turf.js), та в деяких місцях на Python є можливість щось оптимізувати без особливих зусиль. Наприклад, використати Cython для компіляції коду написаного на python в нативне розширення.
@@ -28,7 +28,7 @@ layout: layouts/post
 
 - **Land polygons** — датасет берегової лінії [osmdata/land-polygons](https://osmdata.openstreetmap.de/data/land-polygons.html)
 
-- **Aspectum** — сервіс для візуалізації та аналізу картографічної інформації. Можна скористатись і geojson.io, але при великій кількості геометрію можуть виникати проблеми з продуктивністю. Часто можна замінити інтерфейсом QGIS. Сторінка сервісу [aspectum.com](https://aspectum.com)
+- **QGIS** — програма для візуалізації та аналізу картографічної інформації. Можна також скористатись geojson.io для перегляду результатів
 
 ## Що конкретно ми хочемо отримати?
 
@@ -362,13 +362,9 @@ def polygon_fix(polygon):
 
 На цьому основна частина алгоритму закінчується, а класифіковану геометрію можна зберегти в файл аби десь візуалізувати.
 
-Візуалізація для міста Київ з використанням QGIS
+Візуалізація для міста Київ з використанням QGIS:
 
 ![Класифіковані зони міста Київ](/assets/img/kiev-simple.png)
-
-Роздивитись згенеровану геометрію можна використавши веб-платформу Aspectum:
-
-<iframe title="Інтерактивна карта з класифікованими зонами" class="lazyload" data-src="https://aspectum.com/app/maps/embed/dbcc98bb-6bd2-49ee-92d0-26d03297a33b" width="960" height="600" frameborder="0" style="border: 0"></iframe>
 
 ## Алгоритм з об’єднанням доріг
 
@@ -392,10 +388,6 @@ def merge_roads(polygon):
 А повне зображення для міста Київ:
 
 ![Зони міста Київ з об'єднаними дорогами](/assets/img/kiev-merged.png)
-
-Переглянути для всіх міст можна тут:
-
-<iframe  title="Інтерактивна карта з класифікованими зонами та об'єднаними дорогами" class="lazyload" data-src="https://aspectum.com/app/maps/embed/2351cf7d-e975-4a5d-b10a-b6c2776474da" width="960" height="600" frameborder="0" style="border: 0"></iframe>
 
 ## Алгоритм зі згладжуванням зон
 
@@ -458,13 +450,9 @@ def make_smooth_zones(city_zones):
   return geometry.MultiPolygon(zones_polygons)
 ```
 
-Результат згладжування
+Результат згладжування:
 
 ![Згладжені зони міста Київ](/assets/img/kiev.png)
-
-Роздивитись можна тут:
-
-<iframe title="Інтерактивна карта зі згладженими класифікованими зонами" class="lazyload" data-src="https://aspectum.com/app/maps/embed/10da881d-136c-4c53-b83c-b22815a09ba7" width="960" height="600" frameborder="0" style="border: 0"></iframe>
 
 ## Оптимізація виконання алгоритму
 
