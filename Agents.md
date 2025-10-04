@@ -483,6 +483,7 @@ Based on existing content analysis, here are the author's preferences:
 - **python/**: GIS, data processing, Python libraries
 - **coffee/**: CoffeeScript projects (historical)
 - **neural-networks/**: ML/AI topics, training techniques, AI integration
+- **ai/**: AI-assisted development, LLM usage, development workflow with AI
 - Potential new categories: full-stack development, DevOps/cloud infrastructure, database architecture
 - Consider creating new categories if topic doesn't fit existing ones
 
