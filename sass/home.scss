@@ -1,3 +1,28 @@
+// Full-bleed generative background: spans the viewport behind the content
+// (body is a 1080px column, so the container anchors to the document instead),
+// covers the first screen, and fades out toward the bottom. Not fixed —
+// it scrolls away with the page.
+.hero-art-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  display: none; // shown by hero-art.js on pages with a .hero-art-here marker
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 96%);
+  mask-image: linear-gradient(to bottom, #000 55%, transparent 96%);
+
+  canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+  }
+}
+
 .post-item {
   padding: 20px 0;
   display: flex;

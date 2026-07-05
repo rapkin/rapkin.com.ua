@@ -3,6 +3,7 @@ import LazyLoad from "vanilla-lazyload";
 import SwupSlideTheme from "@swup/slide-theme";
 import "./ga";
 import "./dark-mode";
+import { initHeroArt } from "./hero-art";
 
 const ll = new LazyLoad({ elements_selector: ".lazyload" });
 const sw = new Swup({
@@ -22,9 +23,11 @@ const handleAchor = () => {
 };
 
 handleAchor();
+initHeroArt();
 
 sw.on("contentReplaced", () => {
   ll.update();
   handleAchor();
+  initHeroArt();
   ga("send", "pageview", location.pathname);
 });

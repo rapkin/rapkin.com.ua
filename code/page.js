@@ -141,6 +141,11 @@ const Page = ({
         ></link>
       </head>
       <body>
+        {/* Lives outside #swup so it survives page transitions; hero-art.js
+            shows it only on pages containing a .hero-art-here marker. */}
+        <div id="hero-art" className="hero-art-bg" aria-hidden="true">
+          <canvas id="hero-art-canvas" title="Click for another one"></canvas>
+        </div>
         <div className="top">
           <header role="banner">
             <a className="logo" href="/">

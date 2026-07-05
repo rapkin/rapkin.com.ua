@@ -14,6 +14,8 @@ class Home extends Component {
     const { _pages, _body } = this.props;
     return (
       <Fragment>
+        {/* Marker: tells hero-art.js to activate the background canvas on this page */}
+        <span className="hero-art-here" hidden></span>
         {_body}
         <div>
           {Object.values(_pages)
