@@ -23,16 +23,7 @@
 
 ## Summary
 
-**Senior Full-Stack Engineer** with 10+ years shipping production systems. I architect and build complete solutions - from AI-powered data extraction to SOC 2 compliant cloud infrastructure. Ph.D. candidate researching contextual dialogue generation with neural networks - I study the technology I ship.
-
-**Current impact at Livegistics (since 2021):**
-- Architected and shipped an end-to-end AI document extraction pipeline: field workers photograph paper tickets, the system extracts structured data, and humans only review edge cases. Built on Gemini and Vertex AI with a provider-agnostic design
-- Own the engineering side of SOC 2 compliance: infrastructure configuration, monitoring, and access control on GCP
-- Design complex relational schemas (Prisma, PostgreSQL) and maintain data integrity across integrations with heterogeneous enterprise systems - modern APIs and legacy stacks alike
-- Ship features rapidly through spec-driven development with AI agents, backed by thorough automated testing (unit, e2e, UI)
-- Full ownership from database design to frontend implementation to cloud deployment
-
-**Core strengths:** Building fast, securing properly, architecting thoughtfully. I thrive in environments where quality and velocity both matter - and I've built the workflow to deliver both.
+**Senior Full-Stack Engineer** with 10+ years shipping production systems, at [Livegistics](https://livegistics.com/) since 2021. I own features end-to-end - from database schema through frontend to cloud deployment - and thrive where quality and velocity both matter. Ph.D. candidate researching contextual dialogue generation with neural networks - I study the technology I ship.
 
 
 ## Skills
@@ -62,7 +53,7 @@ Full-stack development across the entire logistics platform ecosystem. Key work:
 - **Modern UI:** Frontend modernization with Radix UI, Tailwind CSS, and React Query; React Native applications with shared business logic
 - **Full Ownership:** Features go from database schema to frontend to deployment through my hands, end to end
 
-Tech stack: TypeScript, React, React Native, Radix UI, Tailwind CSS, React Query, Redux, Mobx, Material UI, Express.js, TSOA, Swagger, Prisma, Ory, Gemini, Vertex AI, Docker, GCP, Cloud Run, Kubernetes, PostgreSQL, Firestore, Redis.
+Tech stack: TypeScript, React, React Native, Radix UI, Tailwind CSS, React Query, Redux, Mobx, Material UI, Express.js, TSOA, Swagger, Prisma, Ory, Gemini, Vertex AI, Docker, GCP, Cloud Run, Kubernetes, Ansible, Grafana, Jest, PostgreSQL, Firestore, Redis.
 
 __EOS Data Analytics__ - (Jul 2020 - Aug 2023) **Software Developer and Computer Vision Scientist**
 
@@ -95,8 +86,6 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
 
 **osm2geojson** - Python library for parsing OpenStreetMap and Overpass JSON data. Used by developers worldwide for geospatial data processing. [View on GitHub →](https://github.com/aspectumapp/osm2geojson)
 
-**Stand For Ukraine** - Built during wartime to connect donors with verified Ukrainian NPOs. Next.js application helping thousands support Ukraine. [Visit site →](https://standforukraine.com/) | [GitHub →](https://github.com/StandForUkraine/site-source)
-
 **gulp-bootstrap-configurator** - Gulp plugin for custom Bootstrap builds, simplifying frontend tooling. [View on GitHub →](https://github.com/rapkin/gulp-bootstrap-configurator)
 
 
@@ -109,23 +98,8 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
     <div>
         <h3>Livegistics: Enterprise Logistics Platform</h3>
         <p>
-            <strong>The Challenge:</strong> Build and scale a comprehensive logistics management platform handling complex workflows, sensitive data, and enterprise compliance requirements.
-            <br/><br/>
-            <strong>My Impact (since 2021, ongoing):</strong>
-            <br/>
-            • <strong>AI Document Extraction:</strong> End-to-end pipeline on Gemini and Vertex AI turning photographed paper tickets into structured data, with human review only for edge cases
-            <br/>
-            • <strong>Database Design:</strong> Complex Prisma schemas modeling intricate relational data across shipments, carriers, customers, and billing
-            <br/>
-            • <strong>SOC 2 Compliance:</strong> Own the engineering side - security controls, audit logging, monitoring, and infrastructure requirements
-            <br/>
-            • <strong>Enterprise Integrations:</strong> Data flowing reliably between the platform and customers' systems, from modern APIs to legacy stacks
-            <br/>
-            • <strong>Cloud Infrastructure:</strong> Scalable GCP infrastructure with Docker, Cloud Run, Kubernetes, monitoring with Grafana
-            <br/>
-            • <strong>Modern UI:</strong> Frontend modernization with Radix UI primitives, Tailwind CSS, React Query; Ory authentication across web and mobile
-            <br/><br/>
-            <strong>Tech Stack:</strong> React, TypeScript, Radix UI, Tailwind CSS, React Query, Material UI, Redux, React Native, Mobx, PostgreSQL, Firestore, Prisma, TSOA, Swagger, Ory, Gemini, Vertex AI, Docker, GCP, Cloud Run, Jest, Kubernetes, Ansible, Grafana
+            A comprehensive logistics management platform handling complex workflows, sensitive data, and enterprise compliance requirements - web and mobile.
+            My main work since 2021 and the home of everything described in the job section above: the AI ticket extraction pipeline, the SOC 2 infrastructure, and the data architecture modeling shipments, carriers, customers, and billing.
             <br/>
             <a class='visit-link' href='https://livegistics.com/' target='_blank' rel='noopener noreferrer'>Visit website</a>
         </p>
@@ -146,6 +120,7 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
             <strong>Tech Stack:</strong> Next.js, React, TypeScript, Styled Components
             <br/>
             <a class='visit-link' href='https://standforukraine.com/' target='_blank' rel='noopener noreferrer'>Visit website</a>
+            <a class='visit-link' href='https://github.com/StandForUkraine/site-source' target='_blank' rel='noopener noreferrer'>Source on GitHub</a>
         </p>
     </div>
 </div>
@@ -200,10 +175,6 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
 
 ## How I Work
 
-**Ownership:** I don't just write code - I ship features. From database schema to deployment, I own the entire vertical slice and make sure it works in production.
-
-**Quality & Speed, together:** My workflow is spec-driven development with AI agents, held to standard by comprehensive automated testing - unit, e2e, and UI. That's how I move fast without leaving a mess behind.
-
 **Communication:** C2-level English proficiency. I explain complex technical decisions clearly, write documentation people actually use, and collaborate effectively across time zones.
 
 **Adaptability:** Unfamiliar codebase, new technology, or context-switching between backend, frontend, and infrastructure - I navigate complexity systematically.
@@ -216,7 +187,7 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
 
 When I'm not building production systems, you'll find me:
 - Exploring geospatial data analysis and GIS technologies
-- Studying neural network architectures and ML papers - including for my Ph.D. dissertation on dialogue generation
+- Studying neural network architectures and ML papers
 - Creating philosophy and tech memes (seriously, check the [about page](/about/))
 - Supporting Ukraine and open-source communities
 
