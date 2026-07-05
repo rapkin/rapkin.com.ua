@@ -1,0 +1,42 @@
+// Theme toggle button. Palette differences between light and dark live in the
+// CSS custom properties defined at the top of global.scss.
+.theme-toggle {
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+  margin-left: 8px;
+
+  &:hover {
+    background: var(--bg-subtle);
+    color: var(--accent);
+  }
+
+  svg {
+    display: block;
+  }
+
+  .moon-icon {
+    display: none;
+  }
+
+  .sun-icon {
+    display: block;
+  }
+}
+
+.dark-mode .theme-toggle {
+  .moon-icon {
+    display: block;
+  }
+
+  .sun-icon {
+    display: none;
+  }
+}

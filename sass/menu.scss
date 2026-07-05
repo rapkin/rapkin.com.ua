@@ -1,17 +1,24 @@
 .menu-wrapper {
   list-style: none;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   margin: 0;
   padding: 0;
   margin-left: auto;
+  gap: 4px;
 }
 
 .menu-item {
-  font-size: 0.8em;
+  font-size: 1rem;
+  font-weight: 500;
   text-decoration: none;
-  padding: 5px 10px;
-  margin-left: 5px;
-  border-radius: 5px;
-  color: #313131;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--bg-subtle);
+    color: var(--accent);
+  }
 }

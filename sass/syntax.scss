@@ -1,11 +1,14 @@
 @import "../node_modules/highlight.js/styles/atom-one-dark";
 
 .hljs {
-  font-size: 0.9em;
-  padding: 20px;
-  border-radius: 5px;
-  border: 1px solid #222;
-  font-family: "Inconsolata", monospace;
+  font-size: 0.95em;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-family: "SF Mono", "Monaco", "Cascadia Code", "Roboto Mono", "Courier New", monospace;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin: 1.5rem 0;
+  line-height: 1.6;
 }
 
 .hljs::-webkit-scrollbar {

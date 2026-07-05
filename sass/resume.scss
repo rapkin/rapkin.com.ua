@@ -1,0 +1,39 @@
+// Resume page specific styles
+
+// Profile header on resume page
+.resume-header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 48px;
+
+  h1 {
+    margin: 0 0 8px 0;
+  }
+
+  h2 {
+    margin: 0 0 16px 0;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  p {
+    margin: 0;
+    color: var(--text-muted);
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+
+    .avatar-photo {
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}

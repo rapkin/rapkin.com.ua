@@ -8,7 +8,6 @@ const yandexVerification = "39324391851d1a5d";
 const googleVerification = "pnATuZP_aTcMjckmXnh2j6oO8Mk9YXUA7GfE7UO4QXk";
 const author = "Mikola Parfenyuck";
 const email = "mikola.parfenyuck@gmail.com";
-const twitterUser = "i_rapkin";
 const githubUser = "rapkin";
 const siteName = "@rapkin | Software developer";
 const bunny = getImagePath("/assets/img/bunny.png", true)
@@ -50,6 +49,19 @@ const Page = ({
   return (
     <html lang="en">
       <head>
+        {/* Kept in sync with src/dark-mode.js: same storage key and class name */}
+        <script dangerouslySetInnerHTML={{__html: `
+          (function() {
+            var theme = null;
+            try { theme = localStorage.getItem('theme'); } catch (e) {}
+            if (!theme) {
+              theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            if (theme === 'dark') {
+              document.documentElement.classList.add('dark-mode');
+            }
+          })();
+        `}} />
         <title>{title}</title>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -74,7 +86,6 @@ const Page = ({
         <meta property="article:author" content={author} />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content={"@" + twitterUser} />
         <meta name="twitter:title" content={title} />
 
         <meta name="description" content={description} />
@@ -120,22 +131,14 @@ const Page = ({
         <link rel="manifest" href="/site.webmanifest" />
 
         <link rel="preconnect" href="https://www.google-analytics.com"></link>
-        {[
-          "inconsolata-v18-latin-regular.woff2",
-          "literata-v13-cyrillic_latin-italic.woff2",
-          "literata-v13-cyrillic_latin-700.woff2",
-          "literata-v13-cyrillic_latin-700italic.woff2",
-          "literata-v13-cyrillic_latin-regular.woff2"
-        ].map(name => (
-          <link
-            rel="preload"
-            as="font"
-            type="font/woff2"
-            key={name}
-            href={"/assets/fonts/" + name}
-            crossOrigin="true"
-          ></link>
-        ))}
+        {/* Literata 700 is the only webfont face in use (headings) */}
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/assets/fonts/literata-v13-cyrillic_latin-700.woff2"
+          crossOrigin="true"
+        ></link>
       </head>
       <body>
         <div className="top">
@@ -156,6 +159,17 @@ const Page = ({
                   About
                 </a>
               </li>
+              <li>
+                <button id="theme-toggle" className="theme-toggle" aria-label="Toggle dark mode">
+                  <svg className="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="4" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.657 4.343L14.243 5.757M5.757 14.243L4.343 15.657M15.657 15.657L14.243 14.243M5.757 5.757L4.343 4.343" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
+                  <svg className="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+              </li>
             </ul>
           </header>
 
@@ -165,11 +179,6 @@ const Page = ({
         <footer>
           &copy; {author}
           <div className="social-links">
-            <Icon
-              name="twitter"
-              title="My twitter"
-              link={`https://twitter.com/${twitterUser}`}
-            />
             <Icon
               name="github"
               title="My github"
