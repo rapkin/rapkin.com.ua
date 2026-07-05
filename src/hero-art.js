@@ -193,7 +193,10 @@ export function initHeroArt() {
   }
   if (!wrap || !canvas) return;
 
-  const active = !!document.querySelector(".hero-art-here");
+  // Below ~1120px the content sheet covers the whole viewport, so the art
+  // would be invisible — skip entirely (no canvas, no rAF) to save battery.
+  const wideEnough = window.innerWidth > 1120;
+  const active = wideEnough && !!document.querySelector(".hero-art-here");
   wrap.style.display = active ? "block" : "none";
   if (!active) return;
 
@@ -249,3 +252,11 @@ export function initHeroArt() {
   };
   rafId = requestAnimationFrame(frame);
 }
+
+// Re-evaluate on resize so the art starts/stops when the viewport crosses
+// the width threshold (initHeroArt is idempotent).
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(initHeroArt, 150);
+});
