@@ -6,34 +6,33 @@
         <h1>Mikola Parfenyuck</h1>
         <h2>Senior Full-Stack Engineer | AI Integration | Cloud Architecture</h2>
         <p>
-            <strong>Lviv, Ukraine</strong> • Born 1997 • Currently at <a href="https://livegistics.com/">Livegistics</a>
+            <strong>Lviv, Ukraine</strong> • Currently at <a href="https://livegistics.com/">Livegistics</a>
         </p>
     </div>
 </div>
 
-### Looking to hire an engineer who can:
+### What I can do for your team:
 - Ship full-stack features independently from day one
-- Design and implement complex database architectures
-- Integrate AI/ML into production systems that scale
+- Design complex database architectures and keep data integrity across messy real-world integrations
+- Take AI/ML from idea to production - not demos, but systems people rely on daily
 - Build secure, compliant infrastructure (SOC 2)
-- Work across your entire stack without handoffs
+- Multiply output with AI-assisted, spec-driven development backed by serious testing
 
 **Let's talk:** [mikola.parfenyuck@gmail.com](mailto:mikola.parfenyuck@gmail.com) • [GitHub](https://github.com/rapkin) • [LinkedIn](https://www.linkedin.com/in/mikola-parfenyuck/)
 
 
 ## Summary
 
-**Senior Full-Stack Engineer** with 10+ years shipping production systems that scale. I architect and build complete solutions - from AI-powered data extraction to SOC 2 compliant cloud infrastructure.
+**Senior Full-Stack Engineer** with 10+ years shipping production systems. I architect and build complete solutions - from AI-powered data extraction to SOC 2 compliant cloud infrastructure. Ph.D. candidate researching contextual dialogue generation with neural networks - I study the technology I ship.
 
-**Current impact at Livegistics (3+ years):**
-- Designed and implemented complex relational database schemas serving logistics operations across multiple teams
-- Built production AI document/ticket extraction systems processing thousands of items
-- Architected and maintained SOC 2 compliant infrastructure on GCP with Docker and Cloud Run
-- Led modern UI development with Radix UI, Tailwind CSS, and React Query
-- Implemented secure authentication systems with Ory across web and mobile platforms
-- Full ownership of features from database design to frontend implementation to cloud deployment
+**Current impact at Livegistics (since 2021):**
+- Architected and shipped an end-to-end AI document extraction pipeline: field workers photograph paper tickets, the system extracts structured data, and humans only review edge cases. Built on Gemini and Vertex AI with a provider-agnostic design
+- Own the engineering side of SOC 2 compliance: infrastructure configuration, monitoring, and access control on GCP
+- Design complex relational schemas (Prisma, PostgreSQL) and maintain data integrity across integrations with heterogeneous enterprise systems - modern APIs and legacy stacks alike
+- Ship features rapidly through spec-driven development with AI agents, backed by thorough automated testing (unit, e2e, UI)
+- Full ownership from database design to frontend implementation to cloud deployment
 
-**Core strengths:** Building fast, securing properly, architecting thoughtfully. I thrive in environments where quality and velocity both matter. Ph.D. candidate in Computer Science with deep expertise in both theoretical foundations and practical production systems.
+**Core strengths:** Building fast, securing properly, architecting thoughtfully. I thrive in environments where quality and velocity both matter - and I've built the workflow to deliver both.
 
 
 ## Skills
@@ -44,25 +43,26 @@ __Back-end__: Node.js, Python, Express, TSOA, Swagger, Prisma, PostgreSQL, Mongo
 
 __DevOps & Cloud__: Docker, Google Cloud Platform (GCP), Cloud Run, Kubernetes, SOC 2 compliance
 
-__Other__: AI integration (document/ticket data extraction), neural networks, data science, GIS, UX/UI, responsive web design, English (C2 by EFSET)
+__AI & ML__: LLM integration (Gemini, Vertex AI), document/ticket data extraction with human-in-the-loop review, AI-assisted engineering (agents, spec-driven development), neural networks, data science
+
+__Other__: automated testing (unit, e2e, UI), GIS, UX/UI, responsive web design, English (C2 by EFSET)
 
 
 ## Jobs
 
 __Livegistics__ - (Sep 2021 - present) **Senior Full-Stack Developer**
 
-Leading full-stack development across the entire logistics platform ecosystem. Key achievements:
+Full-stack development across the entire logistics platform ecosystem. Key work:
 
-- **AI Integration:** Built and deployed production document/ticket data extraction system processing logistics data at scale
-- **Database Architecture:** Designed complex Prisma schemas handling intricate relational data across multiple business domains
-- **Security & Compliance:** Implemented SOC 2 compliance infrastructure, Ory authentication system, security best practices
-- **Cloud Infrastructure:** Architected and maintained GCP infrastructure with Docker, Cloud Run, and Kubernetes
-- **Modern UI Development:** Led frontend modernization using Radix UI, Tailwind CSS, and React Query for optimal UX
-- **Mobile Development:** Built and maintained React Native applications with shared business logic
-- **API Design:** Created robust REST APIs with TSOA, Swagger documentation, type-safe contracts
-- **Full Ownership:** Shipped features end-to-end from database to frontend to deployment
+- **AI Document Extraction:** Architected and shipped the production pipeline end-to-end - drivers photograph paper tickets, the system extracts structured fields, humans review only edge cases. Built on Gemini and Vertex AI with a provider-agnostic design; owned the pipeline architecture, model and prompt engineering, and the review UI
+- **Database Architecture & Data Integrity:** Designed complex Prisma/PostgreSQL schemas across multiple business domains; maintain integrity for data flowing between our platform and customers' enterprise systems, from modern APIs to legacy Microsoft-era stacks
+- **Security & Compliance:** Own the engineering side of SOC 2 - infrastructure configuration, monitoring, access control - plus Ory authentication across web and mobile
+- **Cloud Infrastructure:** Built and maintain GCP infrastructure with Docker, Cloud Run, and Kubernetes
+- **Engineering Workflow:** Ship features rapidly using spec-driven development with AI agents, with quality held by comprehensive automated testing (unit, e2e, UI) and code review
+- **Modern UI:** Frontend modernization with Radix UI, Tailwind CSS, and React Query; React Native applications with shared business logic
+- **Full Ownership:** Features go from database schema to frontend to deployment through my hands, end to end
 
-Tech stack: TypeScript, React, React Native, Radix UI, Tailwind CSS, React Query, Redux, Mobx, Material UI, Express.js, TSOA, Swagger, Prisma, Ory, Docker, GCP, Cloud Run, Kubernetes, PostgreSQL, Firestore, Redis.
+Tech stack: TypeScript, React, React Native, Radix UI, Tailwind CSS, React Query, Redux, Mobx, Material UI, Express.js, TSOA, Swagger, Prisma, Ory, Gemini, Vertex AI, Docker, GCP, Cloud Run, Kubernetes, PostgreSQL, Firestore, Redis.
 
 __EOS Data Analytics__ - (Jul 2020 - Aug 2023) **Software Developer and Computer Vision Scientist**
 
@@ -85,7 +85,7 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
 
 ## Education
 
-- _2020-present_ - The National University of Water and Environmental Engineering, specialty: Computer Science, Ph.D. candidate (in progress)
+- _2020-present_ - The National University of Water and Environmental Engineering, specialty: Computer Science, Ph.D. candidate. Dissertation research: contextual dialogue generation using neural networks
 - _2018-2020_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics, Master's degree
 - _2015-2018_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics, Bachelor's degree
 - _2012-2015_ - Technical College NUWM, specialty: Applied Mathematics
@@ -111,23 +111,21 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
         <p>
             <strong>The Challenge:</strong> Build and scale a comprehensive logistics management platform handling complex workflows, sensitive data, and enterprise compliance requirements.
             <br/><br/>
-            <strong>My Impact (3+ years, ongoing):</strong>
+            <strong>My Impact (since 2021, ongoing):</strong>
             <br/>
-            • <strong>AI Integration:</strong> Architected and deployed production document extraction system processing thousands of logistics tickets with machine learning
+            • <strong>AI Document Extraction:</strong> End-to-end pipeline on Gemini and Vertex AI turning photographed paper tickets into structured data, with human review only for edge cases
             <br/>
-            • <strong>Database Design:</strong> Designed complex Prisma schemas modeling intricate relational data across shipments, carriers, customers, and billing
+            • <strong>Database Design:</strong> Complex Prisma schemas modeling intricate relational data across shipments, carriers, customers, and billing
             <br/>
-            • <strong>SOC 2 Compliance:</strong> Implemented security controls, audit logging, and infrastructure requirements for enterprise certification
+            • <strong>SOC 2 Compliance:</strong> Own the engineering side - security controls, audit logging, monitoring, and infrastructure requirements
             <br/>
-            • <strong>Cloud Infrastructure:</strong> Built and maintained scalable GCP infrastructure with Docker, Cloud Run, Kubernetes, monitoring with Grafana
+            • <strong>Enterprise Integrations:</strong> Data flowing reliably between the platform and customers' systems, from modern APIs to legacy stacks
             <br/>
-            • <strong>Modern UI:</strong> Led frontend modernization with Radix UI primitives, Tailwind CSS, React Query for optimal UX and performance
+            • <strong>Cloud Infrastructure:</strong> Scalable GCP infrastructure with Docker, Cloud Run, Kubernetes, monitoring with Grafana
             <br/>
-            • <strong>Authentication:</strong> Integrated Ory for secure, production-grade authentication across web and mobile
-            <br/>
-            • <strong>Full-Stack Ownership:</strong> Shipped features end-to-end across React, React Native, Node.js, PostgreSQL, and cloud infrastructure
+            • <strong>Modern UI:</strong> Frontend modernization with Radix UI primitives, Tailwind CSS, React Query; Ory authentication across web and mobile
             <br/><br/>
-            <strong>Tech Stack:</strong> React, TypeScript, Radix UI, Tailwind CSS, React Query, Material UI, Redux, React Native, Mobx, PostgreSQL, Firestore, Prisma, TSOA, Swagger, Ory, Docker, GCP, Cloud Run, Jest, Kubernetes, Ansible, Grafana
+            <strong>Tech Stack:</strong> React, TypeScript, Radix UI, Tailwind CSS, React Query, Material UI, Redux, React Native, Mobx, PostgreSQL, Firestore, Prisma, TSOA, Swagger, Ory, Gemini, Vertex AI, Docker, GCP, Cloud Run, Jest, Kubernetes, Ansible, Grafana
             <br/>
             <a class='visit-link' href='https://livegistics.com/' target='_blank' rel='noopener noreferrer'>Visit website</a>
         </p>
@@ -200,17 +198,17 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
 </div>
 
 
-## Why Startups Love Working With Me
+## How I Work
 
-**Ownership Mindset:** I don't just write code - I ship features. From database schema to deployment, I own the entire vertical slice and ensure it works in production.
+**Ownership:** I don't just write code - I ship features. From database schema to deployment, I own the entire vertical slice and make sure it works in production.
 
-**Communication:** C2-level English proficiency. I explain complex technical decisions clearly, write comprehensive documentation, and collaborate effectively across time zones.
+**Quality & Speed, together:** My workflow is spec-driven development with AI agents, held to standard by comprehensive automated testing - unit, e2e, and UI. That's how I move fast without leaving a mess behind.
 
-**Quality & Speed:** I believe in moving fast *and* building things right. Clean code, automated testing, proper architecture - these aren't luxuries, they're essentials for sustainable velocity.
+**Communication:** C2-level English proficiency. I explain complex technical decisions clearly, write documentation people actually use, and collaborate effectively across time zones.
 
-**Adaptability:** Whether diving into an unfamiliar codebase, learning a new technology, or switching contexts between mobile, backend, and infrastructure - I navigate complexity systematically and efficiently.
+**Adaptability:** Unfamiliar codebase, new technology, or context-switching between backend, frontend, and infrastructure - I navigate complexity systematically.
 
-**Zero Drama:** Responsible, calm, balanced, hardworking. No bad habits. I show up, do excellent work, and make the team better.
+**Steady:** Responsible, calm, and consistent. I show up, do good work, and make the team better.
 
 ---
 
@@ -218,20 +216,19 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
 
 When I'm not building production systems, you'll find me:
 - Exploring geospatial data analysis and GIS technologies
-- Studying neural network architectures and ML papers
+- Studying neural network architectures and ML papers - including for my Ph.D. dissertation on dialogue generation
 - Creating philosophy and tech memes (seriously, check the [about page](/about/))
-- Keeping up with the latest in web development and cloud architecture
 - Supporting Ukraine and open-source communities
 
 ---
 
-## Ready to Build Something Amazing?
+## Get in Touch
 
-I'm always interested in connecting with innovative startups solving hard problems. Whether you're scaling a logistics platform, building AI-powered products, or tackling complex technical challenges - let's talk.
+I'm always interested in connecting with startups solving hard problems. Whether you're scaling a platform, building AI-powered products, or wrestling complex data - let's talk.
 
 **Email:** [mikola.parfenyuck@gmail.com](mailto:mikola.parfenyuck@gmail.com)  
 **LinkedIn:** [linkedin.com/in/mikola-parfenyuck](https://www.linkedin.com/in/mikola-parfenyuck/)  
 **GitHub:** [github.com/rapkin](https://github.com/rapkin)  
 **Blog:** [rapkin.com.ua](https://rapkin.com.ua) (you're here!)
 
-*Remote from Lviv, Ukraine • Available for US startup opportunities*
+*Remote from Lviv, Ukraine, with regular US time-zone overlap • Open to senior, staff, or lead roles • Full-time or contract • US & EU startups welcome*
