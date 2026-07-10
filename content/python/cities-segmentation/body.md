@@ -24,7 +24,7 @@ layout: layouts/post
 
 - **Overpass** — API щоб завантажувати, фільтрувати чи трансформувати дані з OSM.
 
-- **Osm2geojson** — бібліотека для конвертації даних OSM (та Overpass) в геометрію. Більше деталей в репозиторії [aspectumapp/osm2geojson](https://github.com/aspectumapp/osm2geojson)
+- **Osm2geojson** — бібліотека для конвертації даних OSM (та Overpass) в геометрію. Більше деталей в репозиторії [rapkin/osm2geojson](https://github.com/rapkin/osm2geojson)
 
 - **Land polygons** — датасет берегової лінії [osmdata/land-polygons](https://osmdata.openstreetmap.de/data/land-polygons.html)
 
@@ -78,7 +78,7 @@ GeoJson файл, в якому містяться набір полігонів
 
 ## Завантаження даних з OSM
 
-Не зміг знайти хорошої бібліотеки аби відпарсити дані OSM (якщо я погано шукав, то поділіться такою бібліотекою в коментарях), тому щоб сформувати необхідну геометрію я написав бібліотеку [osm2geojson](https://github.com/aspectumapp/osm2geojson), яка перетворює OSM/Overpass XML в геометрію Shapely або GeoJSON.
+Не зміг знайти хорошої бібліотеки аби відпарсити дані OSM (якщо я погано шукав, то поділіться такою бібліотекою в коментарях), тому щоб сформувати необхідну геометрію я написав бібліотеку [osm2geojson](https://github.com/rapkin/osm2geojson), яка перетворює OSM/Overpass XML в геометрію Shapely або GeoJSON.
 Звичайно, можна скористатись бібліотекою GDAL, але процес встановлення занадто складний.
 
 Отож отримати межу міста можна простим запитом до API Overpass:

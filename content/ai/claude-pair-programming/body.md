@@ -8,7 +8,7 @@ layout: layouts/post
 
 ## The 30-Minute Miracle
 
-Yesterday, someone opened [issue #52](https://github.com/aspectumapp/osm2geojson/issues/52) in my osm2geojson library. A bug where closed OSM ways (like service roads) were being incorrectly converted to polygons. Clear problem, clear example, straightforward fix.
+Yesterday, someone opened [issue #52](https://github.com/rapkin/osm2geojson/issues/52) in my osm2geojson library. A bug where closed OSM ways (like service roads) were being incorrectly converted to polygons. Clear problem, clear example, straightforward fix.
 
 In the old days - say, 2022 - this would've been a 2+ hour affair: remind myself how the codebase works, set up the environment, run tests, debug, document, release. The kind of thing I'd put off for weeks because who has 2 hours for a "small" fix?
 

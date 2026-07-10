@@ -84,7 +84,7 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
 
 ## Open Source & Community Impact
 
-**osm2geojson** - Python library for parsing OpenStreetMap and Overpass JSON data. Used by developers worldwide for geospatial data processing. [View on GitHub →](https://github.com/aspectumapp/osm2geojson)
+**osm2geojson** - Python library for parsing OpenStreetMap and Overpass JSON data. Used by developers worldwide for geospatial data processing. [View on GitHub →](https://github.com/rapkin/osm2geojson)
 
 **gulp-bootstrap-configurator** - Gulp plugin for custom Bootstrap builds, simplifying frontend tooling. [View on GitHub →](https://github.com/rapkin/gulp-bootstrap-configurator)
 

@@ -39,7 +39,7 @@ out geom;
 
 ![Ukrainian border in overpass](/assets/img/ukraine-border-overpass.png)
 
-When we have border of country we can find all geometries that have intersection with country polygon (or multipolygon). To convert OSM data (loaded with overpass) I use [osm2geojson](https://github.com/aspectumapp/osm2geojson).
+When we have border of country we can find all geometries that have intersection with country polygon (or multipolygon). To convert OSM data (loaded with overpass) I use [osm2geojson](https://github.com/rapkin/osm2geojson).
 Here full example on python how to download data from Overpass and convert it to GeoJSON:
 
 ```python
