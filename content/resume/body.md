@@ -11,92 +11,75 @@
     </div>
 </div>
 
-### What I can do for your team:
-- Ship full-stack features independently from day one
-- Design complex database architectures and keep data integrity across messy real-world integrations
-- Own third-party integrations end to end, plus the monitoring that lets everyone else debug them
-- Take AI/ML from idea to production - not demos, but systems people rely on daily
-- Find the real bottleneck - cut our web app's initial JS payload 35%, killed the queries behind CPU saturation
-- Build secure, compliant infrastructure (SOC 2)
-- Multiply output with AI agents run in parallel under a spec-driven process, backed by real tests
+Senior full-stack engineer, 10+ years, at [Livegistics](https://livegistics.com/) since 2021. I take features from database schema to deployment, and I end up owning the parts nobody volunteers for: integrations with other companies' enterprise systems, the reliability work that keeps them honest, and the tooling that lets the rest of the team work on them too. Ph.D. candidate researching contextual dialogue generation with neural networks.
 
-**Let's talk:** [mikola.parfenyuck@gmail.com](mailto:mikola.parfenyuck@gmail.com) • [GitHub](https://github.com/rapkin) • [LinkedIn](https://www.linkedin.com/in/mikola-parfenyuck/)
-
-
-## Summary
-
-**Senior Full-Stack Engineer** with 10+ years shipping production systems, at [Livegistics](https://livegistics.com/) since 2021. I own features end-to-end - database schema through frontend to cloud deployment - and tend to end up on the hard parts: integrations with other companies' enterprise systems, the reliability work that keeps them honest, and the tooling that lets the team work on them too. Ph.D. candidate researching contextual dialogue generation with neural networks - I study the technology I ship.
+**Let's talk:** [mikola.parfenyuck@gmail.com](mailto:mikola.parfenyuck@gmail.com) • [GitHub](https://github.com/rapkin) • [LinkedIn](https://www.linkedin.com/in/%D0%BC%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0-%D0%BF%D0%B0%D1%80%D1%84%D0%B5%D0%BD%D1%8E%D0%BA-a98b661a9/)
 
 
 ## Skills
 
-__Front-end__: TypeScript, React, Next.js, Radix UI, Tailwind CSS, React Query (TanStack), Mobx, Redux, Material UI, Styled Components
+__Front-end__: TypeScript, React, Next.js, Radix UI, Tailwind CSS, React Query, Mobx, Redux, Material UI
 
-__Back-end__: Node.js, Python, Hono, Express, TSOA, Swagger/OpenAPI, Prisma, Drizzle ORM, PostgreSQL, MongoDB, Redis, Firestore, Ory (authentication)
+__Back-end__: Node.js, Python, Hono, TSOA, Swagger/OpenAPI, Prisma, Drizzle ORM, PostgreSQL, MongoDB, Redis, Firestore, Ory
 
-__DevOps & Cloud__: Docker, Google Cloud Platform (GCP), Cloud Run, Kubernetes, GitHub Actions (CI/CD pipeline optimization), NX monorepo, SOC 2 compliance
+__DevOps & Cloud__: Docker, GCP, Cloud Run, Kubernetes, GitHub Actions, NX monorepo, SOC 2
 
-__Observability & Performance__: Grafana, Sentry, structured logging and audit trails, query and index optimization, profiling, incident response
+__Observability & Performance__: Grafana, Sentry, structured logging, query and index optimization, incident response
 
-__AI & ML__: LLM integration (Gemini, Vertex AI), document/ticket data extraction with human-in-the-loop review, prompt engineering, AI-assisted engineering (parallel coding agents, spec-driven development, MCP servers), neural networks, data science
+__AI & ML__: Gemini, Vertex AI, prompt engineering, document extraction with human review, parallel coding agents, spec-driven development, MCP, neural networks
 
-__Other__: automated testing (unit, integration, e2e with Playwright and Jest), GIS, UX/UI, responsive web design, English (C2 by EFSET)
+__Testing & other__: Playwright, Jest, unit/integration/e2e, GIS, UX/UI, English (C2 by EFSET)
 
 
 ## Jobs
 
 __Livegistics__ - (Sep 2021 - present) **Senior Full-Stack Developer**
 
-Full-stack development across the entire logistics platform ecosystem. Key work:
-
-- **AI Document Extraction:** Architected and shipped the production pipeline end-to-end - drivers photograph paper tickets, the system extracts structured fields, humans review only edge cases. Built on Gemini and Vertex AI with a provider-agnostic design; owned the pipeline architecture, model and prompt engineering, and the review UI
-- **Third-Party Integration Platform:** Sole owner of the external integration layer - a provider-agnostic framework connecting six external systems (enterprise ERPs, industry data providers, partner platforms). Built the connectors and the sync engine under them: entity matching, rename and conflict resolution, queued pushes, scheduled reconciliation, retry and backfill
-- **Database Architecture & Data Integrity:** Designed and evolved a 104-model Prisma/PostgreSQL schema; keep data correct between our platform and customers' enterprise systems, from modern APIs to legacy Microsoft-era stacks
-- **Observability & Production Reliability:** Turned integrations from a 'black box only I could debug' into something the whole team operates - monitoring timelines, per-provider sync status, searchable structured logs, failure triage by outcome, credential-expiry detection, self-service verification UI. Primary responder for production incidents
-- **Performance Engineering:** Cut web First Load JS ~35% with lazy loading and dependency surgery; eliminated N+1 queries; fixed batch-job memory exhaustion with streaming; added indexes to clear CPU saturation and sync timeouts; cut CI time with build caching and prebuilt images
-- **Security & Compliance:** Own the engineering side of SOC 2 - infrastructure configuration, monitoring, access control - plus Ory authentication across web and mobile
-- **Cloud Infrastructure:** Built and maintain GCP infrastructure with Docker, Cloud Run, and Kubernetes
-- **Engineering Workflow:** Set up the team's AI-assisted development practice - engineering constitution, agent instruction docs, a spec-driven workflow (spec → plan → tasks → implement) wired into issue tracking, MCP servers for codebase-aware agents, and guardrails (no auto-commit, secrets isolation, mandatory review). I run several agents in parallel across worktrees; quality held by ~2,400 automated tests and code review
-- **Modern UI:** Frontend modernization with Radix UI, Tailwind CSS, and React Query; React Native applications with shared business logic
-- **Full Ownership:** Features go from database schema to frontend to deployment through my hands, end to end
-
-Tech stack: TypeScript, React, Next.js, React Native, Radix UI, Tailwind CSS, React Query, Redux, Mobx, Material UI, Node.js, Hono, TSOA, Swagger, Prisma, Drizzle ORM, PostgreSQL, Firestore, Redis, Ory, Gemini, Vertex AI, Docker, GCP, Cloud Run, Kubernetes, Ansible, NX, GitHub Actions, Grafana, Sentry, Jest, Playwright.
+- **Integrations.** I own the external integration layer end to end - a provider-agnostic framework wired to six outside systems, from modern APIs to legacy Microsoft-era ERPs. The connectors are the easy half. The hard half is the sync engine under them: entity matching, renames and conflicts, queued pushes, scheduled reconciliation, retry and backfill.
+- **Making them debuggable.** Integrations used to be a black box only I could read. Now the whole team runs them: monitoring timelines, per-provider sync status, searchable logs, failures triaged by outcome, credential-expiry detection, and a self-service verification UI. I'm still the first responder for production incidents.
+- **AI document extraction.** Drivers photograph paper tickets, the system pulls out structured fields, people review only the edge cases. I built the pipeline, picked and tuned the models, and wrote the review UI. Provider-agnostic by design; currently Gemini and Vertex AI.
+- **Data.** A 104-model Prisma/PostgreSQL schema, evolved through 157 migrations without breaking existing customers.
+- **Performance.** Cut web First Load JS by ~35% (layouts 730 → 476 KB gzip). Killed N+1 queries, fixed batch-job memory exhaustion with streaming, added indexes to clear CPU saturation and sync timeouts, and cut CI time with build caching.
+- **Infrastructure and compliance.** GCP on Docker, Cloud Run and Kubernetes. I own the engineering side of SOC 2, plus Ory authentication across web and mobile.
+- **How the team works.** I set up our AI-assisted practice: an engineering constitution, agent instruction docs, a spec-driven workflow wired into issue tracking, MCP servers so agents read the real codebase, and guardrails so they can't commit or reach secrets. I usually have several agents running in parallel across worktrees; ~2,400 automated tests and code review keep it honest.
 
 __EOS Data Analytics__ - (Jul 2020 - Aug 2023) **Software Developer and Computer Vision Scientist**
 
-Research and production development of computer vision systems for satellite imagery analysis. Built ML pipelines for geospatial data processing and analysis tools for earth observation applications.
+Computer vision for satellite imagery: ML pipelines for geospatial data and analysis tools for earth observation.
 
-Tech stack: Python, PyTorch, NumPy, Pandas, TensorFlow, QGIS, React, TypeScript, MongoDB.
+Python, PyTorch, TensorFlow, NumPy, Pandas, QGIS, React, TypeScript, MongoDB.
 
 __Ultimatefintech__ - (Mar 2019 - Jan 2021) **Lead Front-End Developer**
 
-Led frontend development for multiple high-profile projects including Virtual Vision virtual event platform and iFX EXPO International 2020. Architected and built complex interactive experiences with 3D scenes, real-time features, and responsive design.
+Led frontend for the Virtual Vision event platform and iFX EXPO International 2020 - 3D scenes, real-time features, and a lot of interactive UI.
 
-Tech stack: TypeScript, React, Next.js, Vue.js, Nuxt.js, Mobx.
+TypeScript, React, Next.js, Vue.js, Nuxt.js, Mobx.
 
 __Freelance__ - (Dec 2015 - Sep 2021) **Full-Stack Developer**
 
-Delivered complete web solutions for diverse clients across multiple industries. Built full-stack applications, APIs, and database systems while managing client relationships and project timelines.
+Web apps, APIs and databases for small clients, start to finish, including the client conversations.
 
-Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoDB.
+JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoDB.
 
 
 ## Education
 
-- _2020-present_ - The National University of Water and Environmental Engineering, specialty: Computer Science, Ph.D. candidate. Dissertation research: contextual dialogue generation using neural networks
-- _2018-2020_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics, Master's degree
-- _2015-2018_ - The National University of Water and Environmental Engineering, specialty: Applied Mathematics, Bachelor's degree
-- _2012-2015_ - Technical College NUWM, specialty: Applied Mathematics
+The National University of Water and Environmental Engineering:
+
+- _2020-present_ - Ph.D. candidate, Computer Science. Dissertation: contextual dialogue generation using neural networks
+- _2018-2020_ - Master's, Applied Mathematics
+- _2015-2018_ - Bachelor's, Applied Mathematics
+- _2012-2015_ - Technical College NUWM, Applied Mathematics
 
 
-## Open Source & Community Impact
+## Open Source
 
-**osm2geojson** - Python library for parsing OpenStreetMap and Overpass JSON data. Used by developers worldwide for geospatial data processing. [View on GitHub →](https://github.com/rapkin/osm2geojson)
+**osm2geojson** - Python library for parsing OpenStreetMap and Overpass JSON. [GitHub →](https://github.com/rapkin/osm2geojson)
 
-**gulp-bootstrap-configurator** - Gulp plugin for custom Bootstrap builds, simplifying frontend tooling. [View on GitHub →](https://github.com/rapkin/gulp-bootstrap-configurator)
+**gulp-bootstrap-configurator** - Gulp plugin for custom Bootstrap builds. [GitHub →](https://github.com/rapkin/gulp-bootstrap-configurator)
 
 
-## Featured Work & Case Studies
+## Featured Work
 
 <div class='post-item'>
     <a class='image-link' href='/assets/img/livegistics.png' target='_blank' data-no-swup>
@@ -105,8 +88,7 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
     <div>
         <h3>Livegistics: Enterprise Logistics Platform</h3>
         <p>
-            A comprehensive logistics management platform handling complex workflows, sensitive data, and enterprise compliance requirements - web and mobile.
-            My main work since 2021 and the home of everything described in the job section above: the AI ticket extraction pipeline, the integration layer that keeps data in sync with customers' enterprise systems, the SOC 2 infrastructure, and the data architecture modeling shipments, carriers, customers, and billing.
+            The logistics platform I've worked on since 2021 - web and mobile. Everything in the job section above lives here.
             <br/>
             <a class='visit-link' href='https://livegistics.com/' target='_blank' rel='noopener noreferrer'>Visit website</a>
         </p>
@@ -120,11 +102,9 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
     <div>
         <h3>Stand For Ukraine: Humanitarian Aid Platform</h3>
         <p>
-            <strong>The Mission:</strong> Built during Russia's invasion of Ukraine to connect international donors with verified Ukrainian NPOs providing humanitarian aid.
+            Built during Russia's invasion to connect donors abroad with vetted Ukrainian aid organizations. Bilingual, put together fast, and it held up.
             <br/><br/>
-            <strong>Impact:</strong> Architected and developed a bilingual platform aggregating vetted organizations, making it easier for people worldwide to support Ukraine effectively. Deployed quickly under urgent circumstances while maintaining code quality and user experience.
-            <br/><br/>
-            <strong>Tech Stack:</strong> Next.js, React, TypeScript, Styled Components
+            Next.js, React, TypeScript, Styled Components.
             <br/>
             <a class='visit-link' href='https://standforukraine.com/' target='_blank' rel='noopener noreferrer'>Visit website</a>
             <a class='visit-link' href='https://github.com/StandForUkraine/site-source' target='_blank' rel='noopener noreferrer'>Source on GitHub</a>
@@ -139,11 +119,9 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
     <div>
         <h3>Virtual Event Platform with 3D Environments</h3>
         <p>
-            <strong>The Challenge:</strong> Create an immersive virtual event platform with 3D environments, real-time chat, video streaming, and notifications.
+            A conference platform with 3D venues, live chat and video streaming. I built the whole frontend - MobX State Tree for state, Three.js for the scenes.
             <br/><br/>
-            <strong>My Role:</strong> Architected and built the entire frontend platform, implementing complex state management with MobX State Tree, 3D scene rendering with Three.js, real-time communication features, and form handling. Delivered a performant, engaging experience for virtual conference attendees.
-            <br/><br/>
-            <strong>Tech Stack:</strong> Next.js, React, TypeScript, Mobx (mobx-state-tree), Three.js, React Hook Form
+            Next.js, React, TypeScript, mobx-state-tree, Three.js, React Hook Form.
         </p>
     </div>
 </div>
@@ -155,9 +133,7 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
     <div>
         <h3>Virtual Vision landing page</h3>
         <p>
-            Development and optimization for mobile devices.
-            <br/>
-            Used: Next.js, React, TypeScript.
+            Development and mobile optimization. Next.js, React, TypeScript.
         </p>
     </div>
 </div>
@@ -169,44 +145,22 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
     <div>
         <h3>iFX EXPO International 2020 website</h3>
         <p>
-            Full website redesign and codebase refactoring.
-            Addressed various business challenges, added custom floor plan (interactive map), complex registration, and much more.
+            Full redesign and refactor, plus an interactive floor plan and a complicated registration flow. Nuxt.js, Vue.js, SCSS.
             <br/>
-            Used: Nuxt.js, Vue.js, SCSS.
-            <br/>
-            The website is no longer online. The link was https://ifxexpo.com/cyprus2020/.
+            No longer online; it was at https://ifxexpo.com/cyprus2020/.
         </p>
     </div>
 </div>
 
 
-## How I Work
-
-**Communication:** C2-level English proficiency. I explain complex technical decisions clearly, write documentation people actually use, and collaborate effectively across time zones.
-
-**Adaptability:** Unfamiliar codebase, new technology, or context-switching between backend, frontend, and infrastructure - I navigate complexity systematically.
-
-**Steady:** Responsible, calm, and consistent. I show up, do good work, and make the team better.
-
----
-
 ## Beyond Work
 
-When I'm not building production systems, you'll find me:
-- Exploring geospatial data analysis and GIS technologies
-- Studying neural network architectures and ML papers
-- Creating philosophy and tech memes (seriously, check the [about page](/about/))
-- Supporting Ukraine and open-source communities
+Geospatial data, ML papers, and philosophy and tech memes (see the [about page](/about/)).
 
 ---
 
 ## Get in Touch
 
-I'm always interested in connecting with startups solving hard problems. Whether you're scaling a platform, building AI-powered products, or wrestling complex data - let's talk.
+[mikola.parfenyuck@gmail.com](mailto:mikola.parfenyuck@gmail.com) • [LinkedIn](https://www.linkedin.com/in/%D0%BC%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0-%D0%BF%D0%B0%D1%80%D1%84%D0%B5%D0%BD%D1%8E%D0%BA-a98b661a9/) • [GitHub](https://github.com/rapkin)
 
-**Email:** [mikola.parfenyuck@gmail.com](mailto:mikola.parfenyuck@gmail.com)  
-**LinkedIn:** [linkedin.com/in/mikola-parfenyuck](https://www.linkedin.com/in/mikola-parfenyuck/)  
-**GitHub:** [github.com/rapkin](https://github.com/rapkin)  
-**Blog:** [rapkin.com.ua](https://rapkin.com.ua) (you're here!)
-
-*Remote from Lviv, Ukraine, with regular US time-zone overlap • Open to senior, staff, or lead roles • Full-time or contract • US & EU startups welcome*
+*Remote from Lviv, Ukraine, with regular US time-zone overlap • Open to senior, staff, or lead roles • Full-time or contract*
