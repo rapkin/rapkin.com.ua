@@ -11,7 +11,7 @@
     </div>
 </div>
 
-Senior full-stack engineer, 10+ years, at [Livegistics](https://livegistics.com/) since 2021. I take features from database schema to deployment, and I end up owning the parts nobody volunteers for: integrations with other companies' enterprise systems, the reliability work that keeps them honest, and the tooling that lets the rest of the team work on them too. Ph.D. candidate researching contextual dialogue generation with neural networks.
+Senior full-stack engineer with 10+ years of development experience, at [Livegistics](https://livegistics.com/) since 2021. I take features from database schema to deployment, and I end up owning the parts nobody volunteers for: integrations with other companies' enterprise systems, the reliability work that keeps them honest, and the tooling that lets the rest of the team work on them too. Ph.D. candidate researching contextual dialogue generation with neural networks.
 
 **Let's talk:** [mikola.parfenyuck@gmail.com](mailto:mikola.parfenyuck@gmail.com) • [GitHub](https://github.com/rapkin) • [LinkedIn](https://www.linkedin.com/in/%D0%BC%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0-%D0%BF%D0%B0%D1%80%D1%84%D0%B5%D0%BD%D1%8E%D0%BA-a98b661a9/)
 
@@ -35,11 +35,10 @@ __Testing & other__: Playwright, Jest, unit/integration/e2e, GIS, UX/UI, English
 
 __Livegistics__ - (Sep 2021 - present) **Senior Full-Stack Developer**
 
-- **Integrations.** I own the external integration layer end to end - a provider-agnostic framework wired to six outside systems, from modern APIs to legacy Microsoft-era ERPs. The connectors are the easy half. The hard half is the sync engine under them: entity matching, renames and conflicts, queued pushes, scheduled reconciliation, retry and backfill.
-- **Making them debuggable.** Integrations used to be a black box only I could read. Now the whole team runs them: monitoring timelines, per-provider sync status, searchable logs, failures triaged by outcome, credential-expiry detection, and a self-service verification UI. I'm still the first responder for production incidents.
+- **Integrations.** I own the external integration layer end to end - a provider-agnostic framework wired to six outside systems, from modern APIs to legacy Microsoft-era ERPs. The connectors are the easy half; the hard half is the sync engine under them: entity matching, renames and conflicts, queued pushes, scheduled reconciliation, retry and backfill. It used to be a black box only I could read - now the team runs it off monitoring timelines, per-provider status and searchable logs. I'm still first responder for production incidents.
 - **AI document extraction.** Drivers photograph paper tickets, the system pulls out structured fields, people review only the edge cases. I built the pipeline, picked and tuned the models, and wrote the review UI. Provider-agnostic by design; currently Gemini and Vertex AI.
 - **Data.** A 104-model Prisma/PostgreSQL schema, evolved through 157 migrations without breaking existing customers.
-- **Performance.** Cut web First Load JS by ~35% (layouts 730 → 476 KB gzip). Killed N+1 queries, fixed batch-job memory exhaustion with streaming, added indexes to clear CPU saturation and sync timeouts, and cut CI time with build caching.
+- **Performance.** Cut web First Load JS by ~35%. Killed N+1 queries, fixed batch-job memory exhaustion with streaming, added indexes to clear CPU saturation and sync timeouts, and cut CI time by restructuring the job tree so parallel workers reuse one cached Docker build instead of each rebuilding it.
 - **Infrastructure and compliance.** GCP on Docker, Cloud Run and Kubernetes. I own the engineering side of SOC 2, plus Ory authentication across web and mobile.
 - **How the team works.** I set up our AI-assisted practice: an engineering constitution, agent instruction docs, a spec-driven workflow wired into issue tracking, MCP servers so agents read the real codebase, and guardrails so they can't commit or reach secrets. I usually have several agents running in parallel across worktrees; ~2,400 automated tests and code review keep it honest.
 
@@ -155,12 +154,12 @@ The National University of Water and Environmental Engineering:
 
 ## Beyond Work
 
-Geospatial data, ML papers, and philosophy and tech memes (see the [about page](/about/)).
+When I'm not building production systems, you'll find me:
+- Exploring geospatial data analysis and GIS technologies
+- Studying neural network architectures and ML papers
+- Creating philosophy and tech memes (seriously, check the [about page](/about/))
+- Supporting Ukraine and open-source communities
 
 ---
-
-## Get in Touch
-
-[mikola.parfenyuck@gmail.com](mailto:mikola.parfenyuck@gmail.com) • [LinkedIn](https://www.linkedin.com/in/%D0%BC%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0-%D0%BF%D0%B0%D1%80%D1%84%D0%B5%D0%BD%D1%8E%D0%BA-a98b661a9/) • [GitHub](https://github.com/rapkin)
 
 *Remote from Lviv, Ukraine, with regular US time-zone overlap • Open to senior, staff, or lead roles • Full-time or contract*
