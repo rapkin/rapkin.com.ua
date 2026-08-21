@@ -14,29 +14,33 @@
 ### What I can do for your team:
 - Ship full-stack features independently from day one
 - Design complex database architectures and keep data integrity across messy real-world integrations
+- Own third-party integrations end to end, plus the monitoring that lets everyone else debug them
 - Take AI/ML from idea to production - not demos, but systems people rely on daily
+- Find the real bottleneck - cut our web app's initial JS payload 35%, killed the queries behind CPU saturation
 - Build secure, compliant infrastructure (SOC 2)
-- Multiply output with AI-assisted, spec-driven development backed by serious testing
+- Multiply output with AI agents run in parallel under a spec-driven process, backed by real tests
 
 **Let's talk:** [mikola.parfenyuck@gmail.com](mailto:mikola.parfenyuck@gmail.com) • [GitHub](https://github.com/rapkin) • [LinkedIn](https://www.linkedin.com/in/mikola-parfenyuck/)
 
 
 ## Summary
 
-**Senior Full-Stack Engineer** with 10+ years shipping production systems, at [Livegistics](https://livegistics.com/) since 2021. I own features end-to-end - from database schema through frontend to cloud deployment - and thrive where quality and velocity both matter. Ph.D. candidate researching contextual dialogue generation with neural networks - I study the technology I ship.
+**Senior Full-Stack Engineer** with 10+ years shipping production systems, at [Livegistics](https://livegistics.com/) since 2021. I own features end-to-end - database schema through frontend to cloud deployment - and tend to end up on the hard parts: integrations with other companies' enterprise systems, the reliability work that keeps them honest, and the tooling that lets the team work on them too. Ph.D. candidate researching contextual dialogue generation with neural networks - I study the technology I ship.
 
 
 ## Skills
 
-__Front-end__: TypeScript, React, Next.js, Radix UI, Tailwind CSS, React Query, Mobx, Redux, Material UI, Styled Components
+__Front-end__: TypeScript, React, Next.js, Radix UI, Tailwind CSS, React Query (TanStack), Mobx, Redux, Material UI, Styled Components
 
-__Back-end__: Node.js, Python, Express, TSOA, Swagger, Prisma, PostgreSQL, MongoDB, Redis, Firestore, Ory (authentication)
+__Back-end__: Node.js, Python, Hono, Express, TSOA, Swagger/OpenAPI, Prisma, Drizzle ORM, PostgreSQL, MongoDB, Redis, Firestore, Ory (authentication)
 
-__DevOps & Cloud__: Docker, Google Cloud Platform (GCP), Cloud Run, Kubernetes, SOC 2 compliance
+__DevOps & Cloud__: Docker, Google Cloud Platform (GCP), Cloud Run, Kubernetes, GitHub Actions (CI/CD pipeline optimization), NX monorepo, SOC 2 compliance
 
-__AI & ML__: LLM integration (Gemini, Vertex AI), document/ticket data extraction with human-in-the-loop review, AI-assisted engineering (agents, spec-driven development), neural networks, data science
+__Observability & Performance__: Grafana, Sentry, structured logging and audit trails, query and index optimization, profiling, incident response
 
-__Other__: automated testing (unit, e2e, UI), GIS, UX/UI, responsive web design, English (C2 by EFSET)
+__AI & ML__: LLM integration (Gemini, Vertex AI), document/ticket data extraction with human-in-the-loop review, prompt engineering, AI-assisted engineering (parallel coding agents, spec-driven development, MCP servers), neural networks, data science
+
+__Other__: automated testing (unit, integration, e2e with Playwright and Jest), GIS, UX/UI, responsive web design, English (C2 by EFSET)
 
 
 ## Jobs
@@ -46,14 +50,17 @@ __Livegistics__ - (Sep 2021 - present) **Senior Full-Stack Developer**
 Full-stack development across the entire logistics platform ecosystem. Key work:
 
 - **AI Document Extraction:** Architected and shipped the production pipeline end-to-end - drivers photograph paper tickets, the system extracts structured fields, humans review only edge cases. Built on Gemini and Vertex AI with a provider-agnostic design; owned the pipeline architecture, model and prompt engineering, and the review UI
-- **Database Architecture & Data Integrity:** Designed complex Prisma/PostgreSQL schemas across multiple business domains; maintain integrity for data flowing between our platform and customers' enterprise systems, from modern APIs to legacy Microsoft-era stacks
+- **Third-Party Integration Platform:** Sole owner of the external integration layer - a provider-agnostic framework connecting six external systems (enterprise ERPs, industry data providers, partner platforms). Built the connectors and the sync engine under them: entity matching, rename and conflict resolution, queued pushes, scheduled reconciliation, retry and backfill
+- **Database Architecture & Data Integrity:** Designed and evolved a 104-model Prisma/PostgreSQL schema; keep data correct between our platform and customers' enterprise systems, from modern APIs to legacy Microsoft-era stacks
+- **Observability & Production Reliability:** Turned integrations from a 'black box only I could debug' into something the whole team operates - monitoring timelines, per-provider sync status, searchable structured logs, failure triage by outcome, credential-expiry detection, self-service verification UI. Primary responder for production incidents
+- **Performance Engineering:** Cut web First Load JS ~35% with lazy loading and dependency surgery; eliminated N+1 queries; fixed batch-job memory exhaustion with streaming; added indexes to clear CPU saturation and sync timeouts; cut CI time with build caching and prebuilt images
 - **Security & Compliance:** Own the engineering side of SOC 2 - infrastructure configuration, monitoring, access control - plus Ory authentication across web and mobile
 - **Cloud Infrastructure:** Built and maintain GCP infrastructure with Docker, Cloud Run, and Kubernetes
-- **Engineering Workflow:** Ship features rapidly using spec-driven development with AI agents, with quality held by comprehensive automated testing (unit, e2e, UI) and code review
+- **Engineering Workflow:** Set up the team's AI-assisted development practice - engineering constitution, agent instruction docs, a spec-driven workflow (spec → plan → tasks → implement) wired into issue tracking, MCP servers for codebase-aware agents, and guardrails (no auto-commit, secrets isolation, mandatory review). I run several agents in parallel across worktrees; quality held by ~2,400 automated tests and code review
 - **Modern UI:** Frontend modernization with Radix UI, Tailwind CSS, and React Query; React Native applications with shared business logic
 - **Full Ownership:** Features go from database schema to frontend to deployment through my hands, end to end
 
-Tech stack: TypeScript, React, React Native, Radix UI, Tailwind CSS, React Query, Redux, Mobx, Material UI, Express.js, TSOA, Swagger, Prisma, Ory, Gemini, Vertex AI, Docker, GCP, Cloud Run, Kubernetes, Ansible, Grafana, Jest, PostgreSQL, Firestore, Redis.
+Tech stack: TypeScript, React, Next.js, React Native, Radix UI, Tailwind CSS, React Query, Redux, Mobx, Material UI, Node.js, Hono, TSOA, Swagger, Prisma, Drizzle ORM, PostgreSQL, Firestore, Redis, Ory, Gemini, Vertex AI, Docker, GCP, Cloud Run, Kubernetes, Ansible, NX, GitHub Actions, Grafana, Sentry, Jest, Playwright.
 
 __EOS Data Analytics__ - (Jul 2020 - Aug 2023) **Software Developer and Computer Vision Scientist**
 
@@ -99,7 +106,7 @@ Tech stack: JavaScript, TypeScript, React, Angular.js, MySQL, PostgreSQL, MongoD
         <h3>Livegistics: Enterprise Logistics Platform</h3>
         <p>
             A comprehensive logistics management platform handling complex workflows, sensitive data, and enterprise compliance requirements - web and mobile.
-            My main work since 2021 and the home of everything described in the job section above: the AI ticket extraction pipeline, the SOC 2 infrastructure, and the data architecture modeling shipments, carriers, customers, and billing.
+            My main work since 2021 and the home of everything described in the job section above: the AI ticket extraction pipeline, the integration layer that keeps data in sync with customers' enterprise systems, the SOC 2 infrastructure, and the data architecture modeling shipments, carriers, customers, and billing.
             <br/>
             <a class='visit-link' href='https://livegistics.com/' target='_blank' rel='noopener noreferrer'>Visit website</a>
         </p>
