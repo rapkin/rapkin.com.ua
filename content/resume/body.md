@@ -4,27 +4,27 @@
     </a>
     <div>
         <h1>Mikola Parfenyuck</h1>
-        <h2>Senior Full-Stack Engineer | AI Integration | Cloud Architecture</h2>
+        <h2>Senior Full-Stack Engineer & Platform Architect | Enterprise Integrations | AI</h2>
         <p>
             <strong>Lviv, Ukraine</strong> • Currently at <a href="https://livegistics.com/">Livegistics</a>
         </p>
     </div>
 </div>
 
-Senior full-stack engineer with 10+ years of development experience, at [Livegistics](https://livegistics.com/) since 2021. I take features from database schema to deployment, and I end up owning the parts nobody volunteers for: integrations with other companies' enterprise systems, the reliability work that keeps them honest, and the tooling that lets the rest of the team work on them too. Ph.D. candidate researching contextual dialogue generation with neural networks.
+Senior full-stack engineer with 10+ years of development experience, at [Livegistics](https://livegistics.com/) since 2021. In 2023 I wrote the first commit of the company's current cloud platform and designed its architecture; it now runs daily operations for Fortune 500 waste and environmental-services operators. I take features from database schema to deployment, and I end up owning the parts nobody volunteers for: integrations with other companies' enterprise systems, the reliability work that keeps them honest, releases and incidents, and the tooling that lets the rest of the team work on them too. Ph.D. candidate researching contextual dialogue generation with neural networks.
 
 **Let's talk:** [mikola.parfenyuck@gmail.com](mailto:mikola.parfenyuck@gmail.com) • [GitHub](https://github.com/rapkin) • [LinkedIn](https://www.linkedin.com/in/%D0%BC%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0-%D0%BF%D0%B0%D1%80%D1%84%D0%B5%D0%BD%D1%8E%D0%BA-a98b661a9/)
 
 
 ## Skills
 
-__Front-end__: TypeScript, React, Next.js, Radix UI, Tailwind CSS, React Query, Mobx, Redux, Material UI
+__Front-end__: TypeScript, React, Next.js, React Native, Radix UI, Tailwind CSS, React Query, Mobx, Redux
 
-__Back-end__: Node.js, Python, Hono, TSOA, Swagger/OpenAPI, Prisma, Drizzle ORM, PostgreSQL, MongoDB, Redis, Firestore, Ory
+__Back-end__: Node.js, Python, Hono, TSOA, OpenAPI, Prisma, Drizzle ORM, PostgreSQL, PostGIS, Redis, BullMQ, Firestore, Ory, ERP and third-party integrations
 
-__DevOps & Cloud__: Docker, GCP, Cloud Run, Kubernetes, GitHub Actions, NX monorepo, SOC 2
+__DevOps & Cloud__: Docker, GCP, Cloud Run, Cloud Scheduler, Kubernetes, GitHub Actions, NX monorepo, SOC 2
 
-__Observability & Performance__: Grafana, Sentry, structured logging, query and index optimization, incident response
+__Observability & Performance__: Grafana, Sentry, structured logging, query and index optimization, incident response, release management
 
 __AI & ML__: Gemini, Vertex AI, prompt engineering, document extraction with human review, parallel coding agents, spec-driven development, MCP, neural networks
 
@@ -33,14 +33,16 @@ __Testing & other__: Playwright, Jest, unit/integration/e2e, GIS, UX/UI, English
 
 ## Jobs
 
-__Livegistics__ - (Sep 2021 - present) **Senior Full-Stack Developer**
+__Livegistics__ - (Sep 2021 - present) **Senior Full-Stack Engineer, Platform Architect**
 
-- **Integrations.** I own the external integration layer end to end - a provider-agnostic framework wired to six outside systems, from modern APIs to legacy Microsoft-era ERPs. The connectors are the easy half; the hard half is the sync engine under them: entity matching, renames and conflicts, queued pushes, scheduled reconciliation, retry and backfill. It used to be a black box only I could read - now the team runs it off monitoring timelines, per-provider status and searchable logs. I'm still first responder for production incidents.
-- **AI document extraction.** Drivers photograph paper tickets, the system pulls out structured fields, people review only the edge cases. I built the pipeline, picked and tuned the models, and wrote the review UI. Provider-agnostic by design; currently Gemini and Vertex AI.
-- **Data.** A 104-model Prisma/PostgreSQL schema, evolved through 157 migrations without breaking existing customers.
-- **Performance.** Cut web First Load JS by ~35%. Killed N+1 queries, fixed batch-job memory exhaustion with streaming, added indexes to clear CPU saturation and sync timeouts, and cut CI time by restructuring the job tree so parallel workers reuse one cached Docker build instead of each rebuilding it.
-- **Infrastructure and compliance.** GCP on Docker, Cloud Run and Kubernetes. I own the engineering side of SOC 2, plus Ory authentication across web and mobile.
-- **How the team works.** I set up our AI-assisted practice: an engineering constitution, agent instruction docs, a spec-driven workflow wired into issue tracking, MCP servers so agents read the real codebase, and guardrails so they can't commit or reach secrets. I usually have several agents running in parallel across worktrees; ~2,400 automated tests and code review keep it honest.
+- **Platform architecture.** Started the current platform from an empty repository in 2023 and designed its foundation: the PostgreSQL/Prisma data model, a TSOA + Hono API, and an NX monorepo with Next.js web and React Native mobile. It scaled from pilot to tens of thousands of tickets a month on that design, and I still own the schema.
+- **Integrations.** I own the external integration layer end to end: a provider-agnostic framework connecting customers' ERPs, haulers' scale and ticketing systems, a well registry and scanned-manifest ingestion. The connectors are the easy half; the hard half is the sync engine under them: entity matching, conflicts, queued pushes, scheduled reconciliation, retry and backfill. Monitoring, triage and per-ticket history let the team run it without me. I work directly with customers and their ERP consultants on scope and rollout.
+- **Workflow engine.** Designed the configurable ticket-lifecycle engine - transition rules, requirement checks, custom inputs, templates - and migrated every production project through the data-model change without downtime.
+- **AI document extraction.** Drivers photograph paper tickets, the system pulls out structured fields, people review only the edge cases. I built the first pipeline and led the move to Gemini on Vertex AI, with a prompt-configuration layer so extraction is tuned without a deploy.
+- **Platform services.** Rule-based alerting, real-time updates on Firestore and BullMQ, GPS route tracking, PDF generation, audit logs, Ory authentication across web and mobile.
+- **Performance and reliability.** Cut web First Load JS by ~35%. Killed N+1 queries, fixed batch-job memory exhaustion with streaming, cleared CPU saturation and sync timeouts with indexes, and cut the e2e CI job to about a minute. First responder for production incidents; I land most release integrations.
+- **Infrastructure and compliance.** GCP on Docker, Cloud Run and Kubernetes; GitHub Actions pipelines for dev, staging and production. I own the engineering side of SOC 2.
+- **How the team works.** I set up our AI-assisted practice: an engineering constitution, agent instruction docs, a spec-driven workflow wired into issue tracking, MCP servers so agents read the real codebase, and guardrails so they can't commit or reach secrets. Several agents run in parallel across worktrees; e2e coverage and code review keep it honest. I wrote most of our architecture docs, and I interview engineering candidates and onboard new hires - most recently our QA engineer.
 
 __EOS Data Analytics__ - (Jul 2020 - Aug 2023) **Software Developer and Computer Vision Scientist**
 
@@ -73,7 +75,7 @@ The National University of Water and Environmental Engineering:
 
 ## Open Source
 
-**osm2geojson** - Python library for parsing OpenStreetMap and Overpass JSON. [GitHub →](https://github.com/rapkin/osm2geojson)
+**osm2geojson** - Python library for converting OpenStreetMap and Overpass data to GeoJSON. Maintained since 2019, 2M+ downloads. [GitHub →](https://github.com/rapkin/osm2geojson)
 
 **gulp-bootstrap-configurator** - Gulp plugin for custom Bootstrap builds. [GitHub →](https://github.com/rapkin/gulp-bootstrap-configurator)
 
@@ -87,7 +89,7 @@ The National University of Water and Environmental Engineering:
     <div>
         <h3>Livegistics: Enterprise Logistics Platform</h3>
         <p>
-            The logistics platform I've worked on since 2021 - web and mobile. Everything in the job section above lives here.
+            The platform I architected and have built since 2021 - web, mobile and API. Everything in the job section above lives here.
             <br/>
             <a class='visit-link' href='https://livegistics.com/' target='_blank' rel='noopener noreferrer'>Visit website</a>
         </p>
@@ -162,4 +164,4 @@ When I'm not building production systems, you'll find me:
 
 ---
 
-*Remote from Lviv, Ukraine, with regular US time-zone overlap • Open to senior, staff, or lead roles • Full-time or contract*
+*Remote from Lviv, Ukraine, with regular US time-zone overlap • Open to staff, lead, or senior roles • Full-time or contract*
